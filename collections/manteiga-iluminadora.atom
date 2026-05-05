@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="pt-BR" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://aurabeautyclub.com.br/collections/all.atom</id>
+  <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/collections/all"/>
+  <link rel="self" type="application/atom+xml" href="https://aurabeautyclub.com.br/collections/manteiga-iluminadora.atom"/>
+  <title>AURA Beauty Club</title>
+  <updated>2024-08-22T14:00:46-03:00</updated>
+  <author>
+    <name>AURA Beauty Club</name>
+  </author>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8599254106280</id>
+    <published>2024-08-22T14:00:46-03:00</published>
+    <updated>2024-08-22T14:00:46-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/afrodite-garden-magic-butter-manteiga-iluminada-desodorante-corporal-200g"/>
+    <title>Manteiga Iluminadora Afrodite Garden 200g</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ILUMINADORES_MAGIC_BUTTER_AFRODITE.webp?v=1776719882"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            139.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Magic Butter fornece uma pele desodorizada, acetinada, perfumada e radiante. Enriquecida com Manteiga de Karité e vitamina E, promove hidratação de rápida absorção e luminosidade surpreendente. Espalhe a magia com pele macia, perfumada e magicamente radiante.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>afrodite garden</s:tag>
+    <s:tag>Coll-manteiga-iluminadora-Intg</s:tag>
+    <s:tag>ExtCode-AU002006-Intg</s:tag>
+    <s:tag>ExtId-155-Intg</s:tag>
+    <s:tag>iluminadores</s:tag>
+    <s:tag>manteiga iluminadora</s:tag>
+    <s:tag>SkuOriginal-155_0_0_U-Intg</s:tag>
+    <s:tag>Status-Ativo-Intg</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8599254106280</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">139.00</s:price>
+      <s:sku>AU002006</s:sku>
+      <s:grams>278</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8599254040744</id>
+    <published>2024-08-22T14:00:40-03:00</published>
+    <updated>2024-08-22T14:00:40-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/aurora-shine-magic-butter-manteiga-iluminada-desodorante-corporal-200g"/>
+    <title>Manteiga Iluminadora Aurora Shine 200g</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ILUMINADORES_MAGIC_BUTTER_AURORA.webp?v=1776719906"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            139.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Magic Butter fornece uma pele desodorizada, acetinada, perfumada e radiante. Enriquecida com Manteiga de Karité e vitamina E, promove hidratação de rápida absorção e luminosidade surpreendente. Espalhe a magia com pele macia, perfumada e magicamente radiante.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>aurora shine</s:tag>
+    <s:tag>Coll-manteiga-iluminadora-Intg</s:tag>
+    <s:tag>ExtCode-AU002007-Intg</s:tag>
+    <s:tag>ExtId-156-Intg</s:tag>
+    <s:tag>iluminadores</s:tag>
+    <s:tag>manteiga iluminadora</s:tag>
+    <s:tag>SkuOriginal-156_0_0_U-Intg</s:tag>
+    <s:tag>Status-Ativo-Intg</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8599254040744</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">139.00</s:price>
+      <s:sku>AU002007</s:sku>
+      <s:grams>278</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8599253909672</id>
+    <published>2024-08-22T14:00:34-03:00</published>
+    <updated>2024-08-22T14:00:34-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/radiant-hera-butter-manteiga-iluminada-desodorante-corporal-200g"/>
+    <title>Manteiga Iluminadora Radiant Hera 200g</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ILUMINADORES_MAGIC_BUTTER_HERA.webp?v=1776719928"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            139.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Magic Butter fornece uma pele desodorizada, acetinada, perfumada e radiante. Enriquecida com Manteiga de Karité e vitamina E, promove hidratação de rápida absorção e luminosidade surpreendente. Espalhe a magia com pele macia, perfumada e magicamente radiante.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Coll-manteiga-iluminadora-Intg</s:tag>
+    <s:tag>ExtCode-AU002008-Intg</s:tag>
+    <s:tag>ExtId-157-Intg</s:tag>
+    <s:tag>iluminadores</s:tag>
+    <s:tag>manteiga iluminadora</s:tag>
+    <s:tag>radiant hera</s:tag>
+    <s:tag>SkuOriginal-157_0_0_U-Intg</s:tag>
+    <s:tag>Status-Ativo-Intg</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8599253909672</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">139.00</s:price>
+      <s:sku>AU002008</s:sku>
+      <s:grams>278</s:grams>
+    </s:variant>
+  </entry>
+</feed>

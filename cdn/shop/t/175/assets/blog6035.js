@@ -1,0 +1,1 @@
+class BlogFilter extends HTMLElement{constructor(){super();const e=document.querySelector("select");e.addEventListener("change",(function(){window.location.href=e.value}))}}customElements.define("blog-filter",BlogFilter);

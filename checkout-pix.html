@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mercado Pago | Shopify</title>
+  <link rel="icon" href="https://www.mercadopago.com/favicon.ico?42046988b0e465c0" type="image/x-icon" sizes="16x16">
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/proxima-nova-2">
+  <link rel="stylesheet" href="cdn/shop/t/175/assets/mp-checkout-pix.css">
+  <style>
+    /* QR temporário até integração Pix — troque o src via JS ou substitua o atributo. */
+    #pix-qr-placeholder {
+      background: #fff;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+<div class="styles_pageContainer__2Q8Ri">
+  <div class="styles_pixPaymentContainer__LpVBh">
+    <div class="andes-card andes-card--outline andes-card--primary andes-card--padding-0" id="_r_0_" data-andes-card="true" data-andes-card-hierarchy="primary">
+      <div class="andes-card__content" data-andes-card-content="true">
+        <div class="styles_pixPaymentInformativeCardContainer__nC2T3">
+          <span class="andes-typography andes-typography--type-title andes-typography--size-s andes-typography--color-primary andes-typography--weight-regular" id="pix-headline">Falta pouco! Agora pague R$ 143.37 via Pix para finalizar sua compra</span>
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" fill="none" aria-hidden="true">
+              <rect width="54" height="54" x="1" y="1" fill="#fff" rx="27"></rect>
+              <rect width="54" height="54" x="1" y="1" stroke="#00A650" stroke-width="2" rx="27"></rect>
+              <path fill="#00A650" d="M35.5 29.502a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3M28 29.496a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3M19 27.996a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0"></path>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="andes-card andes-card--outline andes-card--primary andes-card--padding-0" id="_r_1_" data-andes-card="true" data-andes-card-hierarchy="primary">
+      <div class="andes-card__content" data-andes-card-content="true">
+        <div class="styles_pixPaymentDisplayQRContainer__3iNTK">
+          <div class="styles_pixPaymentDisplayQRTextContainer__nOBOm">
+            <span class="andes-typography andes-typography--type-body andes-typography--size-m andes-typography--color-primary andes-typography--weight-regular">Escaneie o código QR com o app do seu banco ou copie e cole o código no seu internet banking.</span>
+          </div>
+          <div class="styles_pixPaymentFooterContainer__6ddGt">
+            <svg aria-hidden="true" color="#0000008C" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+              <path d="M8.59697 3.12537V7.62824L11.203 8.93165L10.6662 10.0049L7.39697 8.36978V3.12537H8.59697Z" fill="currentColor"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M15.799 8.00001C15.799 12.3078 12.3068 15.8 7.99897 15.8C3.69115 15.8 0.198975 12.3078 0.198975 8.00001C0.198975 3.69219 3.69115 0.200012 7.99897 0.200012C12.3068 0.200012 15.799 3.69219 15.799 8.00001ZM1.39897 8.00001C1.39897 11.6451 4.3539 14.6 7.99897 14.6C11.6441 14.6 14.599 11.6451 14.599 8.00001C14.599 4.35493 11.6441 1.40001 7.99897 1.40001C4.3539 1.40001 1.39897 4.35493 1.39897 8.00001Z" fill="currentColor"></path>
+            </svg>
+            <span class="andes-typography andes-typography--type-body andes-typography--size-xs andes-typography--color-primary andes-typography--weight-semibold" id="pix-timer-label">Você tem 29 minutos para pagar.</span>
+          </div>
+          <div id="pix-error-banner" hidden style="color:#F04E37;font-size:13px;margin:8px 0;padding:10px;background:#fff3f2;border:1px solid #F04E37;border-radius:6px;"></div>
+          <img id="pix-qr-placeholder" class="pix-qr-image" alt="pix" width="158" height="158" decoding="async"
+               src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22158%22%20height%3D%22158%22%3E%3Crect%20fill%3D%22%23ffffff%22%20width%3D%22158%22%20height%3D%22158%22%2F%3E%3Crect%20fill%3D%22none%22%20stroke%3D%22%23e6e6e6%22%20stroke-width%3D%222%22%20x%3D%221%22%20y%3D%221%22%20width%3D%22156%22%20height%3D%22156%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22%23999999%22%20font-size%3D%2211%22%20font-family%3D%22Proxima%20Nova%2Csans-serif%22%3EQR%20Pix%3C%2Ftext%3E%3C%2Fsvg%3E">
+          <div class="styles_pixPaymentCopyPasteContainer__g5b6t">
+            <div class="andes-form-control andes-form-control--textfield" data-andes-textfield="true">
+              <label for="copy-paste-pix-code" data-andes-textfield-label="true">
+                <span class="andes-form-control__label">Código Pix Copia e Cola</span>
+              </label>
+              <div class="andes-form-control__control">
+                <input id="copy-paste-pix-code" class="andes-form-control__field" rows="1"
+                       data-andes-textfield-input="true" data-andes-textfield-input-type="input" readonly
+                       value="00020126580014br.gov.bcb.pix01360101078c-2cf4-4cd4-ac45-ba2215a5752b5204000053039865406143.375802BR5916BA202409041623586009Sao Paulo62250521mpqrinter1571157981416304B25C">
+              </div>
+            </div>
+            <button type="button" class="andes-button andes-button--large andes-button--loud andes-button--full-width" id="btn-copy-pix" data-andes-button="true" data-andes-button-hierarchy="loud" data-andes-button-size="large">
+              <span class="andes-button__content" data-andes-button-content="true">Copiar Código</span>
+            </button>
+            <div class="styles_securePayment__Q3qm0">
+              <svg aria-hidden="true" color="#0000008C" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M9.18502 10.3948C9.18502 11.0548 8.65 11.5898 7.99002 11.5898C7.33004 11.5898 6.79502 11.0548 6.79502 10.3948C6.79502 9.73484 7.33004 9.19982 7.99002 9.19982C8.65 9.19982 9.18502 9.73484 9.18502 10.3948Z" fill="currentColor"></path>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2012 6.20009H11.6094V3.80935C11.6094 1.81593 9.99343 0.199951 8.00002 0.199951C6.0066 0.199951 4.39062 1.81593 4.39062 3.80935V6.20009H2.79883V12.798C2.79883 14.4548 4.14197 15.798 5.79883 15.798H10.2012C11.8581 15.798 13.2012 14.4548 13.2012 12.798V6.20009ZM10.4094 3.80935V6.20009H5.59062V3.80935C5.59062 2.47867 6.66934 1.39995 8.00002 1.39995C9.33069 1.39995 10.4094 2.47867 10.4094 3.80935ZM3.99883 12.798V7.40009H12.0012V12.798C12.0012 13.7921 11.1953 14.598 10.2012 14.598H5.79883C4.80472 14.598 3.99883 13.7921 3.99883 12.798Z" fill="currentColor"></path>
+              </svg>
+              <span class="andes-typography andes-typography--type-body andes-typography--size-xs andes-typography--color-primary andes-typography--weight-regular">Pagamento seguro</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="styles_pixPaymentActionsContainer__jgT5g">
+      <button type="button" class="andes-button andes-button--large andes-button--quiet" id="btn-back-store-1" data-andes-button="true" data-andes-button-hierarchy="quiet" data-andes-button-size="large">
+        <span class="andes-button__content" data-andes-button-content="true">Voltar para a loja</span>
+      </button>
+    </div>
+  </div>
+  <div class="styles_paymentDetailsContainer__SeuFR">
+    <div class="styles_paymentDetails__mZQG4">
+      <strong class="andes-typography andes-typography--type-body andes-typography--size-m andes-typography--color-primary andes-typography--weight-semibold">Detalhes do pedido</strong>
+      <div>
+        <span class="andes-typography andes-typography--type-body andes-typography--size-s andes-typography--color-primary andes-typography--weight-regular">Informações de contato</span>
+        <p class="andes-typography andes-typography--type-body andes-typography--size-s andes-typography--color-primary andes-typography--weight-regular" id="pix-customer-email">isabeteh92@gmail.com</p>
+      </div>
+      <div>
+        <span class="andes-typography andes-typography--type-body andes-typography--size-s andes-typography--color-primary andes-typography--weight-regular">Endereço de cobrança</span>
+        <p class="andes-typography andes-typography--type-body andes-typography--size-s andes-typography--color-primary andes-typography--weight-regular" id="pix-billing-name">Isabele Sousa</p>
+        <p class="andes-typography andes-typography--type-body andes-typography--size-s andes-typography--color-primary andes-typography--weight-regular" id="pix-billing-line1">Rua Canção das Gaivotas, ⁠29</p>
+        <p class="andes-typography andes-typography--type-body andes-typography--size-s andes-typography--color-primary andes-typography--weight-regular" id="pix-billing-line2">Florianópolis, Santa Catarina</p>
+      </div>
+      <hr>
+      <div>
+        <strong class="andes-typography andes-typography--type-body andes-typography--size-l andes-typography--color-primary andes-typography--weight-semibold">Total</strong>
+        <strong class="andes-typography andes-typography--type-body andes-typography--size-l andes-typography--color-primary andes-typography--weight-semibold" id="pix-order-total">R$143.37</strong>
+      </div>
+    </div>
+    <div class="styles_backStoreMobile__oUfFR">
+      <button type="button" class="andes-button andes-button--large andes-button--quiet andes-button--full-width" id="btn-back-store-2" data-andes-button="true" data-andes-button-hierarchy="quiet" data-andes-button-size="large">
+        <span class="andes-button__content" data-andes-button-content="true">Voltar para a loja</span>
+      </button>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var storeUrl = '/';
+  var pollTimer = null;
+  var transactionId = null;
+
+  function goStore() { window.location.href = storeUrl; }
+  document.getElementById('btn-back-store-1').addEventListener('click', goStore);
+  document.getElementById('btn-back-store-2').addEventListener('click', goStore);
+
+  var copyBtn = document.getElementById('btn-copy-pix');
+  var input = document.getElementById('copy-paste-pix-code');
+  var copyLabel = copyBtn.querySelector('[data-andes-button-content]');
+
+  copyBtn.addEventListener('click', function () {
+    if (!input || !copyLabel) return;
+    var text = input.value;
+    function doneOk() {
+      copyLabel.textContent = 'Código copiado!';
+      setTimeout(function () { copyLabel.textContent = 'Copiar Código'; }, 2500);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(doneOk).catch(function () {
+        input.select(); try { document.execCommand('copy'); doneOk(); } catch (e) {}
+      });
+    } else {
+      input.select(); try { document.execCommand('copy'); doneOk(); } catch (e) {}
+    }
+  });
+
+  function showError(msg) {
+    var banner = document.getElementById('pix-error-banner');
+    if (banner) { banner.textContent = msg; banner.removeAttribute('hidden'); }
+    if (pollTimer) { clearInterval(pollTimer); pollTimer = null; }
+  }
+
+  function pollStatus() {
+    if (!transactionId) return;
+    fetch('/api/pix-status/' + transactionId)
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        if (d.status === 'paid' || d.status === 'approved') {
+          if (pollTimer) { clearInterval(pollTimer); pollTimer = null; }
+          window.location.href = '/checkout-obrigado.html';
+        } else if (d.status === 'expired' || d.status === 'cancelled') {
+          showError('O código expirou. Por favor, faça a compra novamente.');
+        }
+      })
+      .catch(function () {});
+  }
+
+  function initPix() {
+    var info = {};
+    try { info = JSON.parse(sessionStorage.getItem('aura_checkout_info') || '{}'); } catch (e) {}
+
+    var customer = {
+      name: ((info.firstName || '') + ' ' + (info.lastName || '')).trim() || 'Cliente',
+      email: info.email || '',
+      document: info.document || '',
+      phone: info.phone || '',
+    };
+
+    // Populate details sidebar
+    if (info.email) document.getElementById('pix-customer-email').textContent = info.email;
+    if (customer.name && customer.name !== 'Cliente') document.getElementById('pix-billing-name').textContent = customer.name;
+    var addr1 = [info.streetName || info.address1, info.streetNumber].filter(Boolean).join(', ');
+    var addr2 = [info.city, info.province || info.zone].filter(Boolean).join(', ');
+    if (addr1) document.getElementById('pix-billing-line1').textContent = addr1;
+    if (addr2) document.getElementById('pix-billing-line2').textContent = addr2;
+
+    fetch('/api/create-pix', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ customer: customer }),
+    })
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        if (d.error) { showError(d.error); return; }
+        transactionId = d.transactionId;
+        if (d.qrCode) {
+          document.getElementById('pix-qr-placeholder').src = 'data:image/png;base64,' + d.qrCode;
+        }
+        if (d.pixCode) input.value = d.pixCode;
+        pollTimer = setInterval(pollStatus, 5000);
+      })
+      .catch(function (err) {
+        console.error(err);
+        showError('Erro ao gerar PIX. Tente novamente.');
+      });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPix);
+  } else {
+    initPix();
+  }
+})();
+</script>
+</body>
+</html>

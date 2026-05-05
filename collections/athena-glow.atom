@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="pt-BR" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://aurabeautyclub.com.br/collections/all.atom</id>
+  <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/collections/all"/>
+  <link rel="self" type="application/atom+xml" href="https://aurabeautyclub.com.br/collections/athena-glow.atom"/>
+  <title>AURA Beauty Club</title>
+  <updated>2025-10-22T11:29:06-03:00</updated>
+  <author>
+    <name>AURA Beauty Club</name>
+  </author>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/9157862195368</id>
+    <published>2025-10-22T11:29:06-03:00</published>
+    <updated>2025-10-22T11:29:06-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/athena-glow-splash-desodorante-corporal-200ml"/>
+    <title>Body Splash Athena Glow 200ml</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ALCOLICOS_BODY_SPLASH_ATENAS.webp?v=1776716733"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            119.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p><!-- x-tinymce/html -->ATHENA GLOW se junta ao panteão de AURA Beauty, trazendo um novo chamado : ?Que toda mulher honre sua sabedoria interior, seu magnetismo intuitivo e sua inteligência que brilha de dentro para fora.??<br><br></p>
+<p>Athena Glow irradia energia desde a saída luminosa de mandarina, toranja e groselha preta, frescor vibrante que desperta os sentidos. No coração, o jasmim se encontra com a cremosidade das notas de leite e a doçura envolvente do caramelo, revelando acolhimento e sofisticação. Por fim, a base combina a intensidade do âmbar e do sândalo com a sensualidade da baunilha, deixando um rastro inesquecível. Uma fragrância que equilibra frescor e doçura, delicadeza e força como a própria deusa que a inspira.<br><br>Ingredientes: Álcool Etílico, Água, Perfume, Glicerol, Etilhexilglicerina, citronelol, Cumarina, Geraniol, Hidroxicitronelal, Limoneno.<br><br>Modo de uso: Aplique no corpo sempre que desejar. Recomendamos reaplicação ao longo do dia para manter a perfumação e frescor renovado.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>body splashes</s:tag>
+    <s:tag>perfumaria</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/9157862195368</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">119.00</s:price>
+      <s:sku>AU001035</s:sku>
+      <s:grams>248</s:grams>
+    </s:variant>
+  </entry>
+</feed>

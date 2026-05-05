@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="pt-BR" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://aurabeautyclub.com.br/collections/all.atom</id>
+  <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/collections/all"/>
+  <link rel="self" type="application/atom+xml" href="https://aurabeautyclub.com.br/collections/venus-love-1.atom"/>
+  <title>AURA Beauty Club</title>
+  <updated>2025-06-20T15:06:30-03:00</updated>
+  <author>
+    <name>AURA Beauty Club</name>
+  </author>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/9020683387048</id>
+    <published>2025-06-20T15:06:30-03:00</published>
+    <updated>2025-06-20T15:06:30-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/kit-trio-da-deusas"/>
+    <title>Kit Trio das Deusas</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/KIT_TRIO_BODYS_PLASH_VENUS_AFRODITE_E_AURORA.png?v=1776717811"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            285.60
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><div class="product__description rte">
+<p>Não sabe qual fragrância escolher? Não tem problema! Apaixone-se pela experiência completa de Body Splashes AURA Beauty. Um para cada mood, ou misturando suas notas para criar sua assinatura única, você estará sempre perfumada e radiante! </p>
+</div></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>bogo-aura</s:tag>
+    <s:tag>kit</s:tag>
+    <s:tag>perfumaria</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/9020683387048</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">285.60</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/9006696792232</id>
+    <published>2025-06-10T08:54:08-03:00</published>
+    <updated>2025-06-10T08:54:08-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/kit-afrodite-venus-love"/>
+    <title>Kit Afrodite + Venus Love</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/KIT_VENUS_LOVE_E_AFRODITE.png?v=1776718505"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            214.20
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p><strong>VENUS LOVE chega como a quarta Deusa de AURA Beauty</strong><span> para integrar o sucesso da linha de Body Splashes. Venus Love é uma celebração irresistível da doçura envolvente e da sensualidade cremosa.</span><br><span>Venus Love é para quem deseja exalar doçura, charme e uma paixão quase celestial – como o beijo de uma deusa que é pura  tentação.</span><br><br><br><span><strong>Afrodite Garden:</strong> Deixe-se envolver por uma aura mística, inspirada na própria deusa Afrodite. Essa fragrância floral, com flor de laranjeira e jasmim, é repleta de sensualidade e elegante. Afrodite Garden é o elixir floral perfeito para revelar a deusa que existe em você.</span></p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>bogo-aura</s:tag>
+    <s:tag>kit</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/9006696792232</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">214.20</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8991200673960</id>
+    <published>2025-06-05T10:42:36-03:00</published>
+    <updated>2025-06-05T10:42:36-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/venus-love-body-mistico-100ml"/>
+    <title>Body Mistico Venus Love 100ml</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ILUMINADORES_BODY_MISTIC_VENUS.webp?v=1776718678"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            109.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>O Body Místico é um spray iluminador multiuso, que cobre de glow tudo que toca. Perfeito para borrifar na pele, também ajuda a texturizar e perfumar o cabelo, e você pode preparar a pele para a maquiagem e depois fixá-la. Perfeito para ser usado como Hair Mist, perfumando, cuidando e iluminando seu cabelo como nenhum outro. Um presente das deusas, com a fragrância Venus Love</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>spray iluminador</s:tag>
+    <s:tag>venus love</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8991200673960</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">109.00</s:price>
+      <s:sku>AU001032</s:sku>
+      <s:grams>144</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8991201493160</id>
+    <published>2025-06-05T10:42:12-03:00</published>
+    <updated>2025-06-05T10:42:12-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/venus-love-body-splash-desodorante-corporal-200ml"/>
+    <title>Body Splash Venus Love 200ml</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ALCOLICOS_BODY_SPLASH_VENUS.webp?v=1776718628"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            119.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>VENUS LOVE chega como a quarta Deusa de AURA Beauty para integrar o sucesso da linha de Body Splashes. Venus Love é uma celebração irresistível da doçura envolvente e da sensualidade cremosa. Venus Love é para quem deseja exalar doçura, charme e uma paixão quase celestial – como o beijo de uma deusa que é pura tentação.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>body splashes</s:tag>
+    <s:tag>venus love</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8991201493160</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">119.00</s:price>
+      <s:sku>AU001030</s:sku>
+      <s:grams>248</s:grams>
+    </s:variant>
+  </entry>
+</feed>

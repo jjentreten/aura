@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="pt-BR" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://aurabeautyclub.com.br/collections/all.atom</id>
+  <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/collections/all"/>
+  <link rel="self" type="application/atom+xml" href="https://aurabeautyclub.com.br/collections/11-11-numerologia-das-deusas.atom"/>
+  <title>AURA Beauty Club</title>
+  <updated>2025-11-26T11:42:57-03:00</updated>
+  <author>
+    <name>AURA Beauty Club</name>
+  </author>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/9208199741608</id>
+    <published>2025-11-26T11:42:57-03:00</published>
+    <updated>2025-11-26T11:42:57-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/afrodite-garden-kit-miniatura"/>
+    <title>Kit Mini Dupla Afrodite Garden</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/PRESENTEAVEIS_KIT_MINI_AFRODITE_2.webp?v=1776715989"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            103.20
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 13.999999999999998pt; font-family: Cormorant,serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Neste Natal, presenteie com a fragrância da deusa mais amada e premiada do Brasil. O Kit de Natal Afrodite Garden reúne duas joias da linha em uma edição especial:</span></p>
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 13.999999999999998pt; font-family: Cormorant,serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span class="Apple-tab-span" style="white-space: pre;"> </span></span><span style="font-size: 13.999999999999998pt; font-family: Cormorant,serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">•</span><span style="font-size: 13.999999999999998pt; font-family: Cormorant,serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span class="Apple-tab-span" style="white-space: pre;"> </span></span><span style="font-size: 13.999999999999998pt; font-family: Cormorant,serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Mini Body Splash Afrodite Garden (60ml) A versão de bolso da fragrância premiada, que traduz o frescor e a sensualidade da deusa em um toque radiante, perfeito para levar sempre com você.</span></p>
+<p> </p>
+<p dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 13.999999999999998pt; font-family: Cormorant,serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span class="Apple-tab-span" style="white-space: pre;"> </span></span><span style="font-size: 13.999999999999998pt; font-family: Cormorant,serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">•</span><span style="font-size: 13.999999999999998pt; font-family: Cormorant,serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><span class="Apple-tab-span" style="white-space: pre;"> </span></span><span style="font-size: 13.999999999999998pt; font-family: Cormorant,serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Mini Magic Butter Afrodite Garden (50g) Manteiga corporal de textura aveludada, que nutre profundamente a pele enquanto a envolve com um brilho cintilante e  perfume irresistível do jardim de Afrodite.</span></p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>body splashes</s:tag>
+    <s:tag>kit</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/9208199741608</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">103.20</s:price>
+      <s:sku>AU001038</s:sku>
+      <s:grams>290</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/9048401805480</id>
+    <published>2025-11-03T13:49:36-03:00</published>
+    <updated>2025-11-03T13:49:36-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/kit-mini-body-splash-trilogia-das-deusas-60ml"/>
+    <title>Kit Mini Trilogia das Deusas 3x60ml</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/PRESENTEAVEIS_TRILOGIA.webp?v=1776717545"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            111.20
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Dizem que, no princípio, três deusas caminharam entre nós, espalhando suas bênçãos sobre todas as mulheres. Cada uma delas guardava um segredo, uma força, uma essência. Agora, suas auras foram capturadas em fragrâncias únicas, reunidas em um kit lendário: a Trilogia das Deusas.</p>
+<p> </p>
+<p>Trilogia das Deusas traz as Deusas mais desejadas do Olimpo: Afrodite Garden, Aurora Shine e Radiant Hera, em embalagem de 60ml, ideal para levar com você o tempo todo,  usando junto ou separado e criando um ritual e pacto de brilho eterno.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>afrodite garden</s:tag>
+    <s:tag>aurora shine</s:tag>
+    <s:tag>body splashes</s:tag>
+    <s:tag>kit</s:tag>
+    <s:tag>perfumaria</s:tag>
+    <s:tag>radiant hera</s:tag>
+    <s:tag>ultimas-unidades</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/9048401805480</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">111.20</s:price>
+      <s:sku>AU001034</s:sku>
+      <s:grams>248</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/9172920434856</id>
+    <published>2025-10-28T11:39:57-03:00</published>
+    <updated>2025-10-28T11:39:57-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/legado-das-deusas"/>
+    <title>Legado das Deusas</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/Gemini_Generated_Image_1cdho21cdho21cdh.png?v=1776716702"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            214.20
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Body Splash Afrodite Garden:  <span>Deixe-se envolver por uma aura mística, inspirada na própria deusa Afrodite. Essa fragrância floral, com flor de laranjeira e jasmim, é repleta de sensualidade e elegante. Afrodite Garden é o elixir floral perfeito para revelar a deusa que existe em você.<br><br></span></p>
+<div class="product__description rte">
+<p>Body Splash Athena Glow: se junta ao panteão de AURA Beauty, trazendo um novo chamado:  Que toda mulher honre sua sabedoria interior, seu magnetismo intuitivo e sua inteligência que brilha de dentro para fora.  </p>
+</div>
+<div class="custom-icon-text-container"><br></div></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>kit</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/9172920434856</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">214.20</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/9157862195368</id>
+    <published>2025-10-22T11:29:06-03:00</published>
+    <updated>2025-10-22T11:29:06-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/athena-glow-splash-desodorante-corporal-200ml"/>
+    <title>Body Splash Athena Glow 200ml</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ALCOLICOS_BODY_SPLASH_ATENAS.webp?v=1776716733"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            119.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p><!-- x-tinymce/html -->ATHENA GLOW se junta ao panteão de AURA Beauty, trazendo um novo chamado : ?Que toda mulher honre sua sabedoria interior, seu magnetismo intuitivo e sua inteligência que brilha de dentro para fora.??<br><br></p>
+<p>Athena Glow irradia energia desde a saída luminosa de mandarina, toranja e groselha preta, frescor vibrante que desperta os sentidos. No coração, o jasmim se encontra com a cremosidade das notas de leite e a doçura envolvente do caramelo, revelando acolhimento e sofisticação. Por fim, a base combina a intensidade do âmbar e do sândalo com a sensualidade da baunilha, deixando um rastro inesquecível. Uma fragrância que equilibra frescor e doçura, delicadeza e força como a própria deusa que a inspira.<br><br>Ingredientes: Álcool Etílico, Água, Perfume, Glicerol, Etilhexilglicerina, citronelol, Cumarina, Geraniol, Hidroxicitronelal, Limoneno.<br><br>Modo de uso: Aplique no corpo sempre que desejar. Recomendamos reaplicação ao longo do dia para manter a perfumação e frescor renovado.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>body splashes</s:tag>
+    <s:tag>perfumaria</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/9157862195368</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">119.00</s:price>
+      <s:sku>AU001035</s:sku>
+      <s:grams>248</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/9141700067496</id>
+    <published>2025-10-03T17:06:25-03:00</published>
+    <updated>2025-10-03T17:06:25-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/perfume-aura-beauty-100ml-edt-body-splash-venus-love-200ml"/>
+    <title>Kit Puro Amor</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/KIT-VENUS-LOVE-EDT-E-MISTICO-AFRODITE.webp?v=1776716985"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            308.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p><span><strong>Perfume AURA Beauty 100ml - EDT + Body Splash Venus Love 200ml<br><br>EDT -</strong> </span><span>Inspirado nas raízes oníricas e mitológicas da marca, este Deo Colonia é a fragrância que traduz a essência da AURA: uma beleza sensorial, intuitiva, mística e corajosa — feita para mulheres que vivem com brilho nos olhos e alma à flor da pele<br><br><strong>Body Splash </strong>- VENUS LOVE chega como a quarta Deusa de AURA Beauty para integrar o sucesso da linha de Body Splashes. Venus Love é uma celebração irresistível da doçura envolvente e da sensualidade cremosa.<br>Venus Love é para quem deseja exalar doçura, charme e uma paixão quase celestial – como o beijo de uma deusa que é pura  tentação.</span></p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>kit</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/9141700067496</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">308.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/9141695414440</id>
+    <published>2025-10-03T16:59:10-03:00</published>
+    <updated>2025-10-03T16:59:10-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/perfume-aura-beauty-100ml-edt-body-splash-radiant-hera-200ml"/>
+    <title>Kit Inspiração</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/KIT-HERA-EDT-E-MISTICO-AFRODITE.webp?v=1776717041"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            308.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p><span><strong>Perfume AURA Beauty 100ml - EDT + Body Splash Radiant Hera 200ml</strong><br><br>EDT - </span><span>Inspirado nas raízes oníricas e mitológicas da marca, este Deo Colonia é a fragrância que traduz a essência da AURA: uma beleza sensorial, intuitiva, mística e corajosa — feita para mulheres que vivem com brilho nos olhos e alma à flor da pele<br><br>Body Splash - </span><span>Encante-se com a magia luminosa e reconfortante de Radiant Hera. De dar água na boca, a combinação de amêndoas, pralinê e caramelo conferem uma base cremosa com sensação deliciosa de conforto. Radiante Hera conquista, inspira e magnetiza, como um verdadeiro presente das deusas. </span></p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>kit</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/9141695414440</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">308.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/9141692530856</id>
+    <published>2025-10-03T16:51:41-03:00</published>
+    <updated>2025-10-03T16:51:41-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/perfume-aura-beauty-100ml-edt-body-splash-aurora-shine-100ml"/>
+    <title>Kit Beleza Radiante</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/KIT-AURORA-EDT-E-MISTICO-AFRODITE.webp?v=1776717085"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            308.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p><span><strong>Perfume AURA Beauty 100ml - EDT + Body Splash Aurora Shine 200ml:</strong><br><br>EDT - </span><span>Inspirado nas raízes oníricas e mitológicas da marca, este Deo Colonia é a fragrância que traduz a essência da AURA: uma beleza sensorial, intuitiva, mística e corajosa — feita para mulheres que vivem com brilho nos olhos e alma à flor da pele<br><br>Body Splash - </span><span>Digna de uma Deusa, as fragrâncias Aurora Shine te transportam ao Olimpo. A combinação de frutas com madeiras revela uma fusão enigmática, que cativa e deixa um rastro irresistível e luminoso por onde passa.</span></p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>kit</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/9141692530856</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">308.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8652666732712</id>
+    <published>2025-09-11T09:44:07-03:00</published>
+    <updated>2025-09-11T09:44:07-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/kit-deusa-aurora-shine"/>
+    <title>Dupla Aurora Shine</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/KIT_AURORA_GANHE_BODY_SPLASH_PETALS.png?v=1776719518"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            258.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Radiante e perfumada o dia todo com a fragrância Aurora Shine! Sua combinação de frutas com madeiras revelam uma fusão enigmática, que cativa e deixa um rastro irresistível e luminoso por onde passa. Aproveite em dois produtos apaixonantes, o Body Splash e a Magic Butter</span></span></span></span></p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>aurora shine</s:tag>
+    <s:tag>brinde</s:tag>
+    <s:tag>kit</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8652666732712</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">258.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/9115689255080</id>
+    <published>2025-09-10T08:39:11-03:00</published>
+    <updated>2025-09-10T08:39:11-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/perfume-aura-beauty-100ml-edt-body-splash-afrodite-100ml"/>
+    <title>Kit AURA Essencial</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/KIT_AFRODITE_EDT_GANHE_MISTICO_VENUS_LOVE.webp?v=1776717188"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            261.80
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p><strong>Perfume AURA Beauty 100ml - EDT + Body Splash Afrodite 200ml:</strong><br><br>EDT - <span>Inspirado nas raízes oníricas e mitológicas da marca, este Deo Colonia é a fragrância que traduz a essência da AURA: uma beleza sensorial, intuitiva, mística e corajosa — feita para mulheres que vivem com brilho nos olhos e alma à flor da pele<br><br></span>Body Splash: <span>Deixe-se envolver por uma aura mística, inspirada na própria deusa Afrodite. Essa fragrância floral, com flor de laranjeira e jasmim, é repleta de sensualidade e elegante. Afrodite Garden é o elixir floral perfeito para revelar a deusa que existe em você.</span></p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>brinde</s:tag>
+    <s:tag>kit</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/9115689255080</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">261.80</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8652692488360</id>
+    <published>2024-10-01T13:24:17-03:00</published>
+    <updated>2024-10-01T13:24:17-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/kit-deusa-radiant-hera"/>
+    <title>Dupla Radiant Hera</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/KIT_HERA_GANHE_NECESSARIE.png?v=1776719452"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            232.20
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p><meta charset="utf-8">Se encante com a experiência completa da fragrância Radiant Hera. De dar água na boca, a combinação de amêndoas, pralinê e caramelo conferem uma base cremosa com sensação deliciosa de conforto. Aproveite em dois produtos apaixonantes, o Body Splash e a Magic Butter. </p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>bogo-aura</s:tag>
+    <s:tag>kit</s:tag>
+    <s:tag>radiant hera</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8652692488360</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">232.20</s:price>
+      <s:sku/>
+      <s:grams>1</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8644405985448</id>
+    <published>2024-09-25T09:53:36-03:00</published>
+    <updated>2024-09-25T09:53:36-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/dupla-afrodite-garden"/>
+    <title>Dupla Afrodite Garden</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/KIT-AFRODITE-GANHE-BODY-MISTICO-AFRODITE.png?v=1776719545"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            219.30
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p dir="ltr"><span><strong><br></strong>Sinta-se completamente envolvida pela fragrância Afrodite Garden. Essa fragrância floral, com flor de laranjeira e jasmim, é repleta de sensualidade e elegância. Afrodite Garden é o elixir floral perfeito para revelar a deusa que existe em você. Aproveite em dois produtos apaixonantes, o Body Splash e a Magic Butter.</span></p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>afrodite garden</s:tag>
+    <s:tag>bogo-aura</s:tag>
+    <s:tag>brinde</s:tag>
+    <s:tag>kit</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8644405985448</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">219.30</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8599254401192</id>
+    <published>2024-08-22T14:01:04-03:00</published>
+    <updated>2024-08-22T14:01:04-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/afrodite-garden-body-splash-desodorante-corporal-200ml"/>
+    <title>Body Splash Afrodite Garden 200ml</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ALCOLICOS_BODY_SPLASH_AFRODITE.webp?v=1776719692"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            95.20
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Deixe-se envolver por uma aura mística, inspirada na própria deusa Afrodite. Essa fragrância floral, com flor de laranjeira e jasmim, é repleta de sensualidade e elegante. Afrodite Garden é o elixir floral perfeito para revelar a deusa que existe em você.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>afrodite garden</s:tag>
+    <s:tag>body splashes</s:tag>
+    <s:tag>bogo-aura</s:tag>
+    <s:tag>Coll-body-splash-Intg</s:tag>
+    <s:tag>ExtCode-AU001003-Intg</s:tag>
+    <s:tag>ExtId-152-Intg</s:tag>
+    <s:tag>perfumaria</s:tag>
+    <s:tag>SkuOriginal-152_0_0_U-Intg</s:tag>
+    <s:tag>Status-Ativo-Intg</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8599254401192</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">95.20</s:price>
+      <s:sku>AU001003</s:sku>
+      <s:grams>248</s:grams>
+    </s:variant>
+  </entry>
+</feed>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="pt-BR" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://aurabeautyclub.com.br/collections/all.atom</id>
+  <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/collections/all"/>
+  <link rel="self" type="application/atom+xml" href="https://aurabeautyclub.com.br/collections/aurora-shine-1.atom"/>
+  <title>AURA Beauty Club</title>
+  <updated>2025-09-11T09:44:07-03:00</updated>
+  <author>
+    <name>AURA Beauty Club</name>
+  </author>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8652666732712</id>
+    <published>2025-09-11T09:44:07-03:00</published>
+    <updated>2025-09-11T09:44:07-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/kit-deusa-aurora-shine"/>
+    <title>Dupla Aurora Shine</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/KIT_AURORA_GANHE_BODY_SPLASH_PETALS.png?v=1776719518"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            258.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Radiante e perfumada o dia todo com a fragrância Aurora Shine! Sua combinação de frutas com madeiras revelam uma fusão enigmática, que cativa e deixa um rastro irresistível e luminoso por onde passa. Aproveite em dois produtos apaixonantes, o Body Splash e a Magic Butter</span></span></span></span></p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>aurora shine</s:tag>
+    <s:tag>brinde</s:tag>
+    <s:tag>kit</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8652666732712</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">258.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8876898681000</id>
+    <published>2025-03-26T06:30:47-03:00</published>
+    <updated>2025-03-26T06:30:47-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/kit-radiante-por-inteiro"/>
+    <title>Kit Radiante por Inteiro</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/KIT_AURORA_E_PRIMER.png?v=1776718856"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            206.40
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p dir="ltr"><span>A Potência de Aurora Shine: Você, radiante por inteiro</span></p>
+<p dir="ltr"><span>Quando usados em conjunto, o <strong>Gotas Iluminadas Primer Acetinado e o Body Splash Aurora</strong> Shine oferecem uma experiência de cuidados e glamour sem igual. O primer, com sua textura acetinada e toque luminoso, prepara a pele para a perfumação radiante do Body Splash, que finaliza o look com frescor e sofisticação. Juntos, esses dois produtos criam uma harmonia perfeita entre hidratação, luminosidade e fragrância, garantindo um visual radiante que exala confiança e sofisticação.</span></p>
+<p> </p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>aurora shine</s:tag>
+    <s:tag>kit</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8876898681000</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">206.40</s:price>
+      <s:sku/>
+      <s:grams>200</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8743343194280</id>
+    <published>2024-12-13T16:20:45-03:00</published>
+    <updated>2024-12-13T16:20:45-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/presente-das-deusas-aurora-shine"/>
+    <title>Kit Aurora Shine</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/KIT_AURORA_E_GELEIA.png?v=1776719248"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            206.40
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p><span>Radiante e perfumada o dia todo com a fragrância Aurora Shine! Sua combinação de frutas com madeiras revelam uma fusão enigmática, que cativa e deixa um rastro irresistível e luminoso por onde passa. Aproveite em dois produtos apaixonantes, o Body Splash e Geleia Radiante</span></p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>aurora shine</s:tag>
+    <s:tag>bogo-aura</s:tag>
+    <s:tag>kit</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8743343194280</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">206.40</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8599254335656</id>
+    <published>2024-08-22T14:00:57-03:00</published>
+    <updated>2024-08-22T14:00:57-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/aurora-shine-body-splash-desodorante-corporal-200ml"/>
+    <title>Body Spash Aurora Shine 200ml</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ALCOLICOS_BODY_SPLASH_AURORA.webp?v=1776719718"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            95.20
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Digna de uma Deusa, as fragrâncias Aurora Shine te transportam ao Olimpo. A combinação de frutas com madeiras revela uma fusão enigmática, que cativa e deixa um rastro irresistível e luminoso por onde passa.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>aurora shine</s:tag>
+    <s:tag>body splashes</s:tag>
+    <s:tag>Coll-body-splash-Intg</s:tag>
+    <s:tag>ExtCode-AU001004-Intg</s:tag>
+    <s:tag>ExtId-153-Intg</s:tag>
+    <s:tag>perfumaria</s:tag>
+    <s:tag>SkuOriginal-153_0_0_U-Intg</s:tag>
+    <s:tag>Status-Ativo-Intg</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8599254335656</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">95.20</s:price>
+      <s:sku>AU001004</s:sku>
+      <s:grams>248</s:grams>
+    </s:variant>
+  </entry>
+</feed>

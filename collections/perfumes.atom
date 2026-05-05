@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="pt-BR" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://aurabeautyclub.com.br/collections/all.atom</id>
+  <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/collections/all"/>
+  <link rel="self" type="application/atom+xml" href="https://aurabeautyclub.com.br/collections/perfumes.atom"/>
+  <title>AURA Beauty Club</title>
+  <updated>2026-04-23T11:00:17-03:00</updated>
+  <author>
+    <name>AURA Beauty Club</name>
+  </author>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/9405720428712</id>
+    <published>2026-04-23T11:00:17-03:00</published>
+    <updated>2026-04-23T11:00:17-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/afrodite-secret-garden-desodorante-colonia-50ml"/>
+    <title>Perfume Afrodite Secret Garden 50ml</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ALCOLICOS_EDT_SECRET_GARDEN.webp?v=1776715084"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            129.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Conta-se que Afrodite circula entre muitos jardins, mas apenas um é guardado em segredo.<br></p>
+<p>AFRODITE SECRET GARDEN nasce desse refúgio oculto.<br><br>Um jardim reservado apenas à Deusa e às mulheres que assim como as flores, não competem por atenção e que exalam sua essência em perfeita harmonia com a pele, com o tempo e com sua luz.<br><br>AFRODITE SECRET GARDEN, porque toda deusa que floresce à luz também encanta em um jardim só seu.<br><br><br></p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>afrodite garden</s:tag>
+    <s:tag>lancamento</s:tag>
+    <s:tag>perfumaria</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/9405720428712</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">129.00</s:price>
+      <s:sku>AU001043</s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/9212813050024</id>
+    <published>2025-11-28T12:04:51-03:00</published>
+    <updated>2025-11-28T12:04:51-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/olimpo-brilhante"/>
+    <title>Olimpo Brilhante</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/KIT-TRIO-BODYS-PLASH-VENUS-AFRODITE-E-AURORA-E-HERA-E-ATHENA-E-EDT.webp?v=1776715680"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            627.20
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p><span>Não sabe qual fragrância escolher? Não tem problema! Apaixone-se pela experiência completa de AURA Beauty. Um para cada mood, ou misturando suas notas para criar sua assinatura única, você estará sempre perfumada e radiante!</span></p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>kit</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/9212813050024</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">627.20</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/9076710080680</id>
+    <published>2025-11-10T11:38:48-03:00</published>
+    <updated>2025-11-10T11:38:48-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/aura-beauty-desodorante-colonia-edt-100ml"/>
+    <title>Perfume AURA Beauty EDT 100ml</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ALCOLICOS_EDT.webp?v=1776717340"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            160.65
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>O despertar de uma deusa acontece quando o invisível perfuma.</p>
+<p> </p>
+<p>Não é só um perfume. É um ritual de presença.</p>
+<p>O primeiro Eau de Toilette de AURA Beauty emerge, como uma brisa antiga que já existia antes mesmo de você saber.</p>
+<p> </p>
+<p>Inspirado nas raízes oníricas e mitológicas da marca, este Deo Colonia é a fragrância que traduz a essência da AURA: uma beleza sensorial, intuitiva, mística e corajosa — feita para mulheres que vivem com brilho nos olhos e alma à flor da pele.</p>
+<p> </p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/9076710080680</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">160.65</s:price>
+      <s:sku>AU001039</s:sku>
+      <s:grams>175</s:grams>
+    </s:variant>
+  </entry>
+</feed>

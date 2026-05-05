@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="pt-BR" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://aurabeautyclub.com.br/collections/all.atom</id>
+  <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/collections/all"/>
+  <link rel="self" type="application/atom+xml" href="https://aurabeautyclub.com.br/collections/legado-das-deusas.atom"/>
+  <title>AURA Beauty Club</title>
+  <updated>2025-10-28T11:44:36-03:00</updated>
+  <author>
+    <name>AURA Beauty Club</name>
+  </author>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/9172934394024</id>
+    <published>2025-10-28T11:44:36-03:00</published>
+    <updated>2025-10-28T11:44:36-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/misterio-olimpico"/>
+    <title>Mistério Olímpico</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/KIT_AFRODITE_E_ATHENA_E_EDT.webp?v=1776716209"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            341.60
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p><br><span>Deixe-se envolver por uma aura mística, inspirada na própria deusa Afrodite. Essa fragrância floral, com flor de laranjeira e jasmim, é repleta de sensualidade e elegante. Afrodite Garden é o elixir floral perfeito para revelar a deusa que existe em você.<br></span></p>
+<div class="product__description rte">
+<p>Body Splash Athena Glow: se junta ao panteão de AURA Beauty, trazendo um novo chamado:  Que toda mulher honre sua sabedoria interior, seu magnetismo intuitivo e sua inteligência que brilha de dentro para fora.  <br><br>Perfume EDT:  O despertar de uma deusa acontece quando o invisível perfuma.<br>Não é só um perfume. É um ritual de presença. O primeiro Eau de Toilette de AURA Beauty emerge, como uma brisa antiga que já existia antes mesmo de você saber.</p>
+<p>Inspirado nas raízes oníricas e mitológicas da marca, este Deo Colonia é a fragrância que traduz a essência da AURA: uma beleza sensorial, intuitiva, mística e corajosa — feita para mulheres que vivem com brilho nos olhos e alma à flor da pele.</p>
+</div></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>kit</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/9172934394024</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">341.60</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/9172920434856</id>
+    <published>2025-10-28T11:39:57-03:00</published>
+    <updated>2025-10-28T11:39:57-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/legado-das-deusas"/>
+    <title>Legado das Deusas</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/Gemini_Generated_Image_1cdho21cdho21cdh.png?v=1776716702"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            214.20
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Body Splash Afrodite Garden:  <span>Deixe-se envolver por uma aura mística, inspirada na própria deusa Afrodite. Essa fragrância floral, com flor de laranjeira e jasmim, é repleta de sensualidade e elegante. Afrodite Garden é o elixir floral perfeito para revelar a deusa que existe em você.<br><br></span></p>
+<div class="product__description rte">
+<p>Body Splash Athena Glow: se junta ao panteão de AURA Beauty, trazendo um novo chamado:  Que toda mulher honre sua sabedoria interior, seu magnetismo intuitivo e sua inteligência que brilha de dentro para fora.  </p>
+</div>
+<div class="custom-icon-text-container"><br></div></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>kit</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/9172920434856</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">214.20</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+</feed>

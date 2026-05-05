@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="pt-BR" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://aurabeautyclub.com.br/collections/all.atom</id>
+  <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/collections/all"/>
+  <link rel="self" type="application/atom+xml" href="https://aurabeautyclub.com.br/collections/spray-iluminador.atom"/>
+  <title>AURA Beauty Club</title>
+  <updated>2025-06-05T10:42:36-03:00</updated>
+  <author>
+    <name>AURA Beauty Club</name>
+  </author>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8991200673960</id>
+    <published>2025-06-05T10:42:36-03:00</published>
+    <updated>2025-06-05T10:42:36-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/venus-love-body-mistico-100ml"/>
+    <title>Body Mistico Venus Love 100ml</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ILUMINADORES_BODY_MISTIC_VENUS.webp?v=1776718678"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            109.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>O Body Místico é um spray iluminador multiuso, que cobre de glow tudo que toca. Perfeito para borrifar na pele, também ajuda a texturizar e perfumar o cabelo, e você pode preparar a pele para a maquiagem e depois fixá-la. Perfeito para ser usado como Hair Mist, perfumando, cuidando e iluminando seu cabelo como nenhum outro. Um presente das deusas, com a fragrância Venus Love</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>spray iluminador</s:tag>
+    <s:tag>venus love</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8991200673960</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">109.00</s:price>
+      <s:sku>AU001032</s:sku>
+      <s:grams>144</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8624383819944</id>
+    <published>2024-09-10T16:18:57-03:00</published>
+    <updated>2024-09-10T16:18:57-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/afrodite-garden-body-mistico-100ml"/>
+    <title>Body Mistico Afrodite Garden 100ml</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ILUMINADORES_BODY_MISTIC_AFRODITE.webp?v=1776719627"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            109.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>O Body Místico é um iluminador spray multiuso, que cobre de brilho tudo o que toca. Perfeito para borrifar na pele, também ajuda a texturizar o cabelo, e pode preparar a pele para a maquiagem e depois fixá-la. Um presente das deusas, com a fragrância Afrodite Garden.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>afrodite garden</s:tag>
+    <s:tag>Coll-spray-iluminador-Intg</s:tag>
+    <s:tag>ExtCode-AU001001-Intg</s:tag>
+    <s:tag>ExtId-151-Intg</s:tag>
+    <s:tag>iluminadores</s:tag>
+    <s:tag>SkuOriginal-151_0_0_U-Intg</s:tag>
+    <s:tag>spray iluminador</s:tag>
+    <s:tag>Status-Ativo-Intg</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8624383819944</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">109.00</s:price>
+      <s:sku>AU001001</s:sku>
+      <s:grams>144</s:grams>
+    </s:variant>
+  </entry>
+</feed>

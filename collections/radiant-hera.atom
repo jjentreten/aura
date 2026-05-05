@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="pt-BR" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://aurabeautyclub.com.br/collections/all.atom</id>
+  <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/collections/all"/>
+  <link rel="self" type="application/atom+xml" href="https://aurabeautyclub.com.br/collections/radiant-hera.atom"/>
+  <title>AURA Beauty Club</title>
+  <updated>2025-11-03T13:50:20-03:00</updated>
+  <author>
+    <name>AURA Beauty Club</name>
+  </author>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/9071568748712</id>
+    <published>2025-11-03T13:50:20-03:00</published>
+    <updated>2025-11-03T13:50:20-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/body-splash-200ml-kit-triologia-das-deusas-60ml"/>
+    <title>Body Splash 200ml + Kit Trilogia das Deusas 60ml</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/KIT_AFRODITE_TRILOGIA_1.webp?v=1776720193"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            180.60
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Dizem que, no princípio, três deusas caminharam entre nós, espalhando suas bênçãos sobre todas as mulheres. Cada uma delas guardava um segredo, uma força, uma essência. Agora, suas auras foram capturadas em fragrâncias únicas, reunidas em um kit lendário: a Trilogia das Deusas.</p>
+<p>Trilogia das Deusas traz as Deusas mais desejadas do Olimpo: Afrodite Garden, Aurora Shine e Radiant Hera, em embalagem de 60ml, ideal para levar com você o tempo todo,  usando junto ou separado e criando um ritual e pacto de brilho eterno.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>afrodite garden</s:tag>
+    <s:tag>aurora shine</s:tag>
+    <s:tag>kit</s:tag>
+    <s:tag>radiant hera</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/9071568748712</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">180.60</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/9048401805480</id>
+    <published>2025-11-03T13:49:36-03:00</published>
+    <updated>2025-11-03T13:49:36-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/kit-mini-body-splash-trilogia-das-deusas-60ml"/>
+    <title>Kit Mini Trilogia das Deusas 3x60ml</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/PRESENTEAVEIS_TRILOGIA.webp?v=1776717545"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            111.20
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Dizem que, no princípio, três deusas caminharam entre nós, espalhando suas bênçãos sobre todas as mulheres. Cada uma delas guardava um segredo, uma força, uma essência. Agora, suas auras foram capturadas em fragrâncias únicas, reunidas em um kit lendário: a Trilogia das Deusas.</p>
+<p> </p>
+<p>Trilogia das Deusas traz as Deusas mais desejadas do Olimpo: Afrodite Garden, Aurora Shine e Radiant Hera, em embalagem de 60ml, ideal para levar com você o tempo todo,  usando junto ou separado e criando um ritual e pacto de brilho eterno.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>afrodite garden</s:tag>
+    <s:tag>aurora shine</s:tag>
+    <s:tag>body splashes</s:tag>
+    <s:tag>kit</s:tag>
+    <s:tag>perfumaria</s:tag>
+    <s:tag>radiant hera</s:tag>
+    <s:tag>ultimas-unidades</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/9048401805480</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">111.20</s:price>
+      <s:sku>AU001034</s:sku>
+      <s:grams>248</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/9045771452584</id>
+    <published>2025-10-06T15:49:55-03:00</published>
+    <updated>2025-10-06T15:49:55-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/kit-radiant-hera-e-ganhe-body-mistico-venus-love"/>
+    <title>Kit Radiant Hera</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/KIT_HERA_GANHE_NECESSARIE.png?v=1776719452"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            232.20
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><div class="product__description rte">
+<p><br>Se encante com a experiência completa da fragrância Radiant Hera. De dar água na boca, a combinação de amêndoas, pralinê e caramelo conferem uma base cremosa com sensação deliciosa de conforto. Aproveite em dois produtos apaixonantes, o Body Splash e a Magic Butter. </p>
+</div></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>kit</s:tag>
+    <s:tag>radiant hera</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/9045771452584</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">232.20</s:price>
+      <s:sku/>
+      <s:grams>300</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8652692488360</id>
+    <published>2024-10-01T13:24:17-03:00</published>
+    <updated>2024-10-01T13:24:17-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/kit-deusa-radiant-hera"/>
+    <title>Dupla Radiant Hera</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/KIT_HERA_GANHE_NECESSARIE.png?v=1776719452"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            232.20
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p><meta charset="utf-8">Se encante com a experiência completa da fragrância Radiant Hera. De dar água na boca, a combinação de amêndoas, pralinê e caramelo conferem uma base cremosa com sensação deliciosa de conforto. Aproveite em dois produtos apaixonantes, o Body Splash e a Magic Butter. </p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>bogo-aura</s:tag>
+    <s:tag>kit</s:tag>
+    <s:tag>radiant hera</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8652692488360</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">232.20</s:price>
+      <s:sku/>
+      <s:grams>1</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8599254237352</id>
+    <published>2024-08-22T14:00:52-03:00</published>
+    <updated>2024-08-22T14:00:52-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/radiant-hera-body-splash-desodorante-corporal-200ml"/>
+    <title>Body Splash Radiant Hera 200ml</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ALCOLICOS_BODY_SPLASH_HERA.webp?v=1776719754"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            119.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Encante-se com a magia luminosa e reconfortante de Radiant Hera. De dar água na boca, a combinação de amêndoas, pralinê e caramelo conferem uma base cremosa com sensação deliciosa de conforto. Radiante Hera conquista, inspira e magnetiza, como um verdadeiro presente das deusas.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>body splashes</s:tag>
+    <s:tag>Coll-body-splash-Intg</s:tag>
+    <s:tag>ExtCode-AU001005-Intg</s:tag>
+    <s:tag>ExtId-154-Intg</s:tag>
+    <s:tag>perfumaria</s:tag>
+    <s:tag>radiant hera</s:tag>
+    <s:tag>SkuOriginal-154_0_0_U-Intg</s:tag>
+    <s:tag>Status-Ativo-Intg</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8599254237352</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">119.00</s:price>
+      <s:sku>AU001005</s:sku>
+      <s:grams>248</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8599253909672</id>
+    <published>2024-08-22T14:00:34-03:00</published>
+    <updated>2024-08-22T14:00:34-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/radiant-hera-butter-manteiga-iluminada-desodorante-corporal-200g"/>
+    <title>Manteiga Iluminadora Radiant Hera 200g</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ILUMINADORES_MAGIC_BUTTER_HERA.webp?v=1776719928"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            139.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Magic Butter fornece uma pele desodorizada, acetinada, perfumada e radiante. Enriquecida com Manteiga de Karité e vitamina E, promove hidratação de rápida absorção e luminosidade surpreendente. Espalhe a magia com pele macia, perfumada e magicamente radiante.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Coll-manteiga-iluminadora-Intg</s:tag>
+    <s:tag>ExtCode-AU002008-Intg</s:tag>
+    <s:tag>ExtId-157-Intg</s:tag>
+    <s:tag>iluminadores</s:tag>
+    <s:tag>manteiga iluminadora</s:tag>
+    <s:tag>radiant hera</s:tag>
+    <s:tag>SkuOriginal-157_0_0_U-Intg</s:tag>
+    <s:tag>Status-Ativo-Intg</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8599253909672</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">139.00</s:price>
+      <s:sku>AU002008</s:sku>
+      <s:grams>278</s:grams>
+    </s:variant>
+  </entry>
+</feed>

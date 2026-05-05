@@ -1,0 +1,690 @@
+/* Thank you — layout e detalhes próximos ao checkout Shopify (thank you). */
+:root {
+  --ty-bg: rgb(251, 247, 242);
+  --ty-surface: #fff;
+  --ty-text: #111;
+  --ty-muted: rgba(0, 0, 0, 0.65);
+  --ty-border: rgba(0, 0, 0, 0.12);
+  --ty-accent: #008060;
+  --ty-link: #1773b0;
+  --ty-header-pad: 1rem 1.25rem;
+  --ty-sidebar-width: 380px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body.thank-you-page {
+  margin: 0;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--ty-text);
+  background: var(--ty-bg);
+}
+
+.thank-you-page a {
+  color: var(--ty-link);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.thank-you-page a:hover {
+  text-decoration-thickness: 2px;
+}
+
+.ty-skip {
+  position: absolute;
+  left: -9999px;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  background: var(--ty-surface);
+  color: var(--ty-text);
+}
+
+.ty-skip:focus {
+  left: 0.5rem;
+  top: 0.5rem;
+}
+
+.ty-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Grade principal: coluna + sidebar (desktop) */
+.ty-checkout-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 990px) {
+  .ty-checkout-grid {
+    grid-template-columns: minmax(0, 1fr) var(--ty-sidebar-width);
+    align-items: stretch;
+  }
+}
+
+.ty-main-stack {
+  min-width: 0;
+  border-right: none;
+}
+
+@media (min-width: 990px) {
+  .ty-main-stack {
+    border-right: 1px solid var(--ty-border);
+  }
+}
+
+/* Cabeçalho único — logo centralizada */
+.ty-header {
+  background: var(--ty-surface);
+  border-bottom: 1px solid var(--ty-border);
+  padding: var(--ty-header-pad);
+}
+
+.ty-header--outer .ty-header-inner {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.ty-header--outer .ty-logo-link {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.35rem;
+}
+
+.ty-header-inner {
+  max-width: none;
+  margin: 0;
+}
+
+.ty-logo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.ty-logo-link:hover {
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.ty-logo-link img {
+  display: block;
+  width: 130px;
+  height: auto;
+}
+
+.ty-logo-link .ty-logo-caption {
+  font-size: 0.8125rem;
+  color: var(--ty-muted);
+}
+
+@media (max-width: 749px) {
+  .ty-header--outer .ty-logo-caption {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    max-width: 16rem;
+    line-height: 1.3;
+  }
+}
+
+.ty-logo-link .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Resumo do pedido — barra móvel (disclosure) */
+.ty-mobile-summary {
+  display: block;
+  background: var(--ty-surface);
+  border-bottom: 1px solid var(--ty-border);
+}
+
+@media (min-width: 990px) {
+  .ty-mobile-summary {
+    display: none;
+  }
+}
+
+.ty-disclosure-btn {
+  width: 100%;
+  margin: 0;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border: none;
+  background: var(--ty-surface);
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.ty-disclosure-btn:hover {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.ty-disclosure-btn:focus-visible {
+  outline: 2px solid var(--ty-link);
+  outline-offset: -2px;
+}
+
+.ty-disclosure-left {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.ty-disclosure-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.ty-disclosure-titles .ty-label-main {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.ty-disclosure-titles .ty-label-total-word {
+  font-size: 0.75rem;
+  color: var(--ty-muted);
+  font-weight: 400;
+}
+
+.ty-thumb-stack {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.ty-thumb-stack .ty-thumb {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 0.35rem;
+  object-fit: cover;
+  border: 1px solid var(--ty-border);
+  margin-right: -0.6rem;
+  background: var(--ty-bg);
+}
+
+.ty-thumb-stack .ty-thumb:last-child {
+  margin-right: 0;
+}
+
+.ty-disclosure-mid {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.2rem;
+  flex-shrink: 0;
+}
+
+.ty-disclosure-mid .ty-preço-total-label {
+  font-size: 0.75rem;
+  color: var(--ty-muted);
+}
+
+.ty-disclosure-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+}
+
+.ty-disclosure-price-row .ty-currency-small {
+  font-size: 0.7rem;
+  color: var(--ty-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.ty-disclosure-price-row strong {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.ty-mobile-total-line {
+  margin: 0;
+}
+
+.ty-disclosure-chevron {
+  flex-shrink: 0;
+  color: rgba(0, 0, 0, 0.55);
+  transition: transform 0.2s ease;
+}
+
+.ty-disclosure-btn[aria-expanded="true"] .ty-disclosure-chevron {
+  transform: rotate(180deg);
+}
+
+.ty-disclosure-panel {
+  overflow: hidden;
+  border-top: 1px solid var(--ty-border);
+  background: rgba(251, 247, 242, 0.5);
+}
+
+.ty-disclosure-panel[hidden] {
+  display: none;
+}
+
+.ty-disclosure-panel-inner {
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+/* Conteúdo principal + rodapé de políticas */
+.ty-inner-wrap {
+  background: var(--ty-bg);
+}
+
+.ty-main {
+  padding: 1.5rem 1.25rem 2.5rem;
+  max-width: 720px;
+}
+
+@media (min-width: 750px) {
+  .ty-main {
+    padding: 2rem 2.5rem 3rem;
+  }
+}
+
+.ty-main > h1 {
+  font-size: clamp(1.375rem, 2.5vw, 1.625rem);
+  font-weight: 500;
+  margin: 0 0 1.35rem;
+  letter-spacing: -0.02em;
+}
+
+.ty-hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.15rem;
+  align-items: flex-start;
+  margin-bottom: 1.75rem;
+}
+
+.ty-check {
+  flex-shrink: 0;
+  width: 4.8rem;
+  height: 4.8rem;
+  color: var(--ty-accent);
+}
+
+.ty-hero-text {
+  min-width: 0;
+}
+
+.ty-confirmation {
+  margin: 0 0 0.35rem;
+  font-size: 0.8125rem;
+  color: var(--ty-muted);
+}
+
+.ty-greeting {
+  margin: 0;
+  font-size: clamp(1.2rem, 2.2vw, 1.45rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.ty-section {
+  background: var(--ty-surface);
+  border: 1px solid var(--ty-border);
+  border-radius: 0.5rem;
+  padding: 1.15rem 1.25rem;
+  margin-bottom: 0.85rem;
+}
+
+.ty-section h2 {
+  margin: 0 0 0.65rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.ty-section p {
+  margin: 0;
+  color: var(--ty-muted);
+  font-size: 0.875rem;
+}
+
+.ty-info-grid {
+  display: grid;
+  gap: 1.15rem;
+}
+
+@media (min-width: 750px) {
+  .ty-info-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.ty-block h3 {
+  margin: 0 0 0.35rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.ty-block p,
+.ty-block address {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--ty-muted);
+  font-style: normal;
+  line-height: 1.45;
+}
+
+.ty-payment-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.ty-payment-row img {
+  display: block;
+}
+
+.ty-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.85rem;
+}
+
+.ty-help {
+  width: 100%;
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--ty-muted);
+}
+
+.ty-btn-store {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.7rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ty-text);
+  background: #f7f7f7;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  border-radius: 0.3125rem;
+  text-decoration: none;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.ty-btn-store:hover {
+  filter: brightness(0.97);
+  text-decoration: none;
+}
+
+/* Sidebar desktop */
+.ty-desktop-summary {
+  display: none;
+  background: var(--ty-bg);
+}
+
+@media (min-width: 990px) {
+  .ty-desktop-summary {
+    display: block;
+  }
+}
+
+.ty-desktop-summary-inner {
+  position: sticky;
+  top: 0;
+  padding: 1.5rem 1.25rem 3rem;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+.ty-desktop-summary-inner > .ty-summary-block {
+  margin-bottom: 1.25rem;
+}
+
+.ty-summary-block {
+  background: transparent;
+}
+
+.ty-summary-block > h2 {
+  margin: 0 0 0.85rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.ty-order-table-wrap {
+  overflow-x: auto;
+  margin: 0;
+  padding: 0;
+  max-height: min(40vh, 380px);
+  overflow-y: auto;
+  border: 1px solid var(--ty-border);
+  border-radius: 0.5rem;
+  background: var(--ty-surface);
+}
+
+.ty-order-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+}
+
+.ty-order-table caption {
+  text-align: left;
+  font-weight: 500;
+  font-size: 0.875rem;
+  padding: 0.85rem 1rem 0.5rem;
+}
+
+.ty-order-table thead th {
+  text-align: left;
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: var(--ty-muted);
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--ty-border);
+  background: var(--ty-surface);
+}
+
+.ty-order-table tbody td {
+  vertical-align: top;
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--ty-border);
+  background: var(--ty-surface);
+}
+
+.ty-order-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.ty-order-table .ty-col-img {
+  width: 4.5rem;
+}
+
+.ty-order-table .ty-col-img img {
+  width: 3.2rem;
+  height: 3.2rem;
+  object-fit: cover;
+  border-radius: 0.25rem;
+  border: 1px solid var(--ty-border);
+}
+
+.ty-order-table .ty-col-qty {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.ty-order-table .ty-col-price {
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.ty-scroll-hint {
+  display: none;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  color: var(--ty-muted);
+  padding: 0.5rem 1rem 0.75rem;
+  background: var(--ty-surface);
+  border: 1px solid var(--ty-border);
+  border-top: none;
+  border-radius: 0 0 0.5rem 0.5rem;
+  margin-top: -0.35rem;
+}
+
+.ty-scroll-hint.is-visible {
+  display: flex;
+}
+
+.ty-cost-summary {
+  margin-top: 0.25rem;
+}
+
+.ty-cost-summary h3 {
+  margin: 0 0 0.65rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.ty-cost-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+  background: var(--ty-surface);
+  border: 1px solid var(--ty-border);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.ty-cost-table thead th {
+  padding: 0.5rem 1rem;
+  text-align: left;
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: var(--ty-muted);
+  border-bottom: 1px solid var(--ty-border);
+  width: 50%;
+}
+
+.ty-cost-table thead th:last-child {
+  text-align: right;
+}
+
+.ty-cost-table tbody td {
+  padding: 0.55rem 1rem;
+  border-bottom: 1px solid var(--ty-border);
+  font-variant-numeric: tabular-nums;
+}
+
+.ty-cost-table tbody td:last-child {
+  text-align: right;
+}
+
+.ty-cost-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.ty-cost-table .ty-cost-total-row td {
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+  font-size: 0.9375rem;
+}
+
+.ty-cost-total-row .ty-total-money {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: 0.4rem;
+}
+
+.ty-currency-abbr {
+  font-size: 0.7rem;
+  color: var(--ty-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.ty-footer-checkout {
+  padding: 1.25rem 1.25rem 2rem;
+  background: var(--ty-bg);
+  border-top: 1px solid var(--ty-border);
+}
+
+@media (min-width: 750px) {
+  .ty-footer-checkout {
+    padding: 1.5rem 2.5rem 2.5rem;
+  }
+}
+
+.ty-footer-checkout ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+
+.ty-foot-btn {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  font-size: 0.8125rem;
+  color: var(--ty-link);
+  text-decoration: underline;
+  cursor: pointer;
+  text-underline-offset: 0.15em;
+}
+
+.ty-foot-btn:hover {
+  text-decoration-thickness: 2px;
+}
+
+.demo-banner {
+  margin: 0 0 1rem;
+  padding: 0.65rem 1rem;
+  font-size: 0.8125rem;
+  color: var(--ty-muted);
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 0.375rem;
+  border: 1px dashed var(--ty-border);
+}

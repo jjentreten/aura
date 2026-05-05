@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="pt-BR" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://aurabeautyclub.com.br/collections/all.atom</id>
+  <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/collections/all"/>
+  <link rel="self" type="application/atom+xml" href="https://aurabeautyclub.com.br/collections/afrodite-garden.atom"/>
+  <title>AURA Beauty Club</title>
+  <updated>2026-04-23T11:00:17-03:00</updated>
+  <author>
+    <name>AURA Beauty Club</name>
+  </author>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/9405720428712</id>
+    <published>2026-04-23T11:00:17-03:00</published>
+    <updated>2026-04-23T11:00:17-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/afrodite-secret-garden-desodorante-colonia-50ml"/>
+    <title>Perfume Afrodite Secret Garden 50ml</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ALCOLICOS_EDT_SECRET_GARDEN.webp?v=1776715084"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            129.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Conta-se que Afrodite circula entre muitos jardins, mas apenas um é guardado em segredo.<br></p>
+<p>AFRODITE SECRET GARDEN nasce desse refúgio oculto.<br><br>Um jardim reservado apenas à Deusa e às mulheres que assim como as flores, não competem por atenção e que exalam sua essência em perfeita harmonia com a pele, com o tempo e com sua luz.<br><br>AFRODITE SECRET GARDEN, porque toda deusa que floresce à luz também encanta em um jardim só seu.<br><br><br></p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>afrodite garden</s:tag>
+    <s:tag>lancamento</s:tag>
+    <s:tag>perfumaria</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/9405720428712</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">129.00</s:price>
+      <s:sku>AU001043</s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/9071568748712</id>
+    <published>2025-11-03T13:50:20-03:00</published>
+    <updated>2025-11-03T13:50:20-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/body-splash-200ml-kit-triologia-das-deusas-60ml"/>
+    <title>Body Splash 200ml + Kit Trilogia das Deusas 60ml</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/KIT_AFRODITE_TRILOGIA_1.webp?v=1776720193"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            180.60
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Dizem que, no princípio, três deusas caminharam entre nós, espalhando suas bênçãos sobre todas as mulheres. Cada uma delas guardava um segredo, uma força, uma essência. Agora, suas auras foram capturadas em fragrâncias únicas, reunidas em um kit lendário: a Trilogia das Deusas.</p>
+<p>Trilogia das Deusas traz as Deusas mais desejadas do Olimpo: Afrodite Garden, Aurora Shine e Radiant Hera, em embalagem de 60ml, ideal para levar com você o tempo todo,  usando junto ou separado e criando um ritual e pacto de brilho eterno.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>afrodite garden</s:tag>
+    <s:tag>aurora shine</s:tag>
+    <s:tag>kit</s:tag>
+    <s:tag>radiant hera</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/9071568748712</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">180.60</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/9048401805480</id>
+    <published>2025-11-03T13:49:36-03:00</published>
+    <updated>2025-11-03T13:49:36-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/kit-mini-body-splash-trilogia-das-deusas-60ml"/>
+    <title>Kit Mini Trilogia das Deusas 3x60ml</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/PRESENTEAVEIS_TRILOGIA.webp?v=1776717545"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            111.20
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Dizem que, no princípio, três deusas caminharam entre nós, espalhando suas bênçãos sobre todas as mulheres. Cada uma delas guardava um segredo, uma força, uma essência. Agora, suas auras foram capturadas em fragrâncias únicas, reunidas em um kit lendário: a Trilogia das Deusas.</p>
+<p> </p>
+<p>Trilogia das Deusas traz as Deusas mais desejadas do Olimpo: Afrodite Garden, Aurora Shine e Radiant Hera, em embalagem de 60ml, ideal para levar com você o tempo todo,  usando junto ou separado e criando um ritual e pacto de brilho eterno.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>afrodite garden</s:tag>
+    <s:tag>aurora shine</s:tag>
+    <s:tag>body splashes</s:tag>
+    <s:tag>kit</s:tag>
+    <s:tag>perfumaria</s:tag>
+    <s:tag>radiant hera</s:tag>
+    <s:tag>ultimas-unidades</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/9048401805480</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">111.20</s:price>
+      <s:sku>AU001034</s:sku>
+      <s:grams>248</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8943032238248</id>
+    <published>2025-05-06T23:20:09-03:00</published>
+    <updated>2025-05-06T23:20:09-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/duo-de-oleos-multifenomenal-afrodite-garden"/>
+    <title>Duo Óleos Multifuncionais - Afrodite Garden 2x30ml</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ILUMINADORES_DUO_DE_OLEOS.webp?v=1776718742"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            208.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Uma dupla de óleos multifuncionais iluminadores, nas cores dourada e prateada, trazendo o Brilho do Sol e o Brilho da Lua. Ideal para rosto, corpo e cabelos, é enriquecido com mica, iluminando e perfumando a pele. Sua textura leve e acabamento acetinado são combinados à Vitamina E, tornando-o perfeito para todos os tipos de pele e cabelo, com ingredientes hidratantes e antioxidantes.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>afrodite garden</s:tag>
+    <s:tag>duo oleo</s:tag>
+    <s:tag>iluminadores</s:tag>
+    <s:tag>Status-Ativo-Intg</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8943032238248</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">208.00</s:price>
+      <s:sku>AU002026</s:sku>
+      <s:grams>175</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8644405985448</id>
+    <published>2024-09-25T09:53:36-03:00</published>
+    <updated>2024-09-25T09:53:36-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/dupla-afrodite-garden"/>
+    <title>Dupla Afrodite Garden</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/KIT-AFRODITE-GANHE-BODY-MISTICO-AFRODITE.png?v=1776719545"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            219.30
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p dir="ltr"><span><strong><br></strong>Sinta-se completamente envolvida pela fragrância Afrodite Garden. Essa fragrância floral, com flor de laranjeira e jasmim, é repleta de sensualidade e elegância. Afrodite Garden é o elixir floral perfeito para revelar a deusa que existe em você. Aproveite em dois produtos apaixonantes, o Body Splash e a Magic Butter.</span></p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>afrodite garden</s:tag>
+    <s:tag>bogo-aura</s:tag>
+    <s:tag>brinde</s:tag>
+    <s:tag>kit</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8644405985448</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">219.30</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8624383819944</id>
+    <published>2024-09-10T16:18:57-03:00</published>
+    <updated>2024-09-10T16:18:57-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/afrodite-garden-body-mistico-100ml"/>
+    <title>Body Mistico Afrodite Garden 100ml</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ILUMINADORES_BODY_MISTIC_AFRODITE.webp?v=1776719627"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            109.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>O Body Místico é um iluminador spray multiuso, que cobre de brilho tudo o que toca. Perfeito para borrifar na pele, também ajuda a texturizar o cabelo, e pode preparar a pele para a maquiagem e depois fixá-la. Um presente das deusas, com a fragrância Afrodite Garden.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>afrodite garden</s:tag>
+    <s:tag>Coll-spray-iluminador-Intg</s:tag>
+    <s:tag>ExtCode-AU001001-Intg</s:tag>
+    <s:tag>ExtId-151-Intg</s:tag>
+    <s:tag>iluminadores</s:tag>
+    <s:tag>SkuOriginal-151_0_0_U-Intg</s:tag>
+    <s:tag>spray iluminador</s:tag>
+    <s:tag>Status-Ativo-Intg</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8624383819944</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">109.00</s:price>
+      <s:sku>AU001001</s:sku>
+      <s:grams>144</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8599254401192</id>
+    <published>2024-08-22T14:01:04-03:00</published>
+    <updated>2024-08-22T14:01:04-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/afrodite-garden-body-splash-desodorante-corporal-200ml"/>
+    <title>Body Splash Afrodite Garden 200ml</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ALCOLICOS_BODY_SPLASH_AFRODITE.webp?v=1776719692"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            95.20
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Deixe-se envolver por uma aura mística, inspirada na própria deusa Afrodite. Essa fragrância floral, com flor de laranjeira e jasmim, é repleta de sensualidade e elegante. Afrodite Garden é o elixir floral perfeito para revelar a deusa que existe em você.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>afrodite garden</s:tag>
+    <s:tag>body splashes</s:tag>
+    <s:tag>bogo-aura</s:tag>
+    <s:tag>Coll-body-splash-Intg</s:tag>
+    <s:tag>ExtCode-AU001003-Intg</s:tag>
+    <s:tag>ExtId-152-Intg</s:tag>
+    <s:tag>perfumaria</s:tag>
+    <s:tag>SkuOriginal-152_0_0_U-Intg</s:tag>
+    <s:tag>Status-Ativo-Intg</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8599254401192</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">95.20</s:price>
+      <s:sku>AU001003</s:sku>
+      <s:grams>248</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8599254106280</id>
+    <published>2024-08-22T14:00:46-03:00</published>
+    <updated>2024-08-22T14:00:46-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/afrodite-garden-magic-butter-manteiga-iluminada-desodorante-corporal-200g"/>
+    <title>Manteiga Iluminadora Afrodite Garden 200g</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ILUMINADORES_MAGIC_BUTTER_AFRODITE.webp?v=1776719882"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            139.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Magic Butter fornece uma pele desodorizada, acetinada, perfumada e radiante. Enriquecida com Manteiga de Karité e vitamina E, promove hidratação de rápida absorção e luminosidade surpreendente. Espalhe a magia com pele macia, perfumada e magicamente radiante.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>afrodite garden</s:tag>
+    <s:tag>Coll-manteiga-iluminadora-Intg</s:tag>
+    <s:tag>ExtCode-AU002006-Intg</s:tag>
+    <s:tag>ExtId-155-Intg</s:tag>
+    <s:tag>iluminadores</s:tag>
+    <s:tag>manteiga iluminadora</s:tag>
+    <s:tag>SkuOriginal-155_0_0_U-Intg</s:tag>
+    <s:tag>Status-Ativo-Intg</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8599254106280</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">139.00</s:price>
+      <s:sku>AU002006</s:sku>
+      <s:grams>278</s:grams>
+    </s:variant>
+  </entry>
+</feed>

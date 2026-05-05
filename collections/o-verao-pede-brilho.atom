@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="pt-BR" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://aurabeautyclub.com.br/collections/all.atom</id>
+  <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/collections/all"/>
+  <link rel="self" type="application/atom+xml" href="https://aurabeautyclub.com.br/collections/o-verao-pede-brilho.atom"/>
+  <title>AURA Beauty Club</title>
+  <updated>2025-09-11T09:44:07-03:00</updated>
+  <author>
+    <name>AURA Beauty Club</name>
+  </author>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8652666732712</id>
+    <published>2025-09-11T09:44:07-03:00</published>
+    <updated>2025-09-11T09:44:07-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/kit-deusa-aurora-shine"/>
+    <title>Dupla Aurora Shine</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/KIT_AURORA_GANHE_BODY_SPLASH_PETALS.png?v=1776719518"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            258.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Radiante e perfumada o dia todo com a fragrância Aurora Shine! Sua combinação de frutas com madeiras revelam uma fusão enigmática, que cativa e deixa um rastro irresistível e luminoso por onde passa. Aproveite em dois produtos apaixonantes, o Body Splash e a Magic Butter</span></span></span></span></p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>aurora shine</s:tag>
+    <s:tag>brinde</s:tag>
+    <s:tag>kit</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8652666732712</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">258.00</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8991200673960</id>
+    <published>2025-06-05T10:42:36-03:00</published>
+    <updated>2025-06-05T10:42:36-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/venus-love-body-mistico-100ml"/>
+    <title>Body Mistico Venus Love 100ml</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ILUMINADORES_BODY_MISTIC_VENUS.webp?v=1776718678"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            109.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>O Body Místico é um spray iluminador multiuso, que cobre de glow tudo que toca. Perfeito para borrifar na pele, também ajuda a texturizar e perfumar o cabelo, e você pode preparar a pele para a maquiagem e depois fixá-la. Perfeito para ser usado como Hair Mist, perfumando, cuidando e iluminando seu cabelo como nenhum outro. Um presente das deusas, com a fragrância Venus Love</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>spray iluminador</s:tag>
+    <s:tag>venus love</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8991200673960</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">109.00</s:price>
+      <s:sku>AU001032</s:sku>
+      <s:grams>144</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8870839287976</id>
+    <published>2025-03-26T09:52:00-03:00</published>
+    <updated>2025-03-26T09:52:00-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/aurora-shine-gotas-iluminadas-primer-acetinado-30ml"/>
+    <title>Primer Acetinado Gotas Iluminadas Aurora Shine 30ml</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ILUMINADORES_PRIMER_ILUMINADOR.webp?v=1776718911"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            189.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Com acabamento acetinado e textura perolada, é um primer que proporciona um viço saudável, deixando o rosto, pescoço e colo com uma aparência fascinante e naturalmente cuidada. Enriquecido com niacinamida e ácido hialurônico, prepara a pele para maquiagem ou a deixa naturalmente luminosa. É indicado para todos os tipos de pele</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>aurora shine</s:tag>
+    <s:tag>iluminadores</s:tag>
+    <s:tag>primer</s:tag>
+    <s:tag>ultimas-unidades</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8870839287976</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">189.00</s:price>
+      <s:sku>AU006025</s:sku>
+      <s:grams>135</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8796681306280</id>
+    <published>2025-01-31T14:19:42-03:00</published>
+    <updated>2025-01-31T14:19:42-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/kit-radiante"/>
+    <title>Kit Radiante</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/KIT_GELEIA_E_MISTICO_AFRODITE.png?v=1776719208"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            198.40
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Body Mistico: <span>O Body Místico é um spray iluminador multiuso, que cobre de glow tudo que toca. Perfeito para borrifar na pele, também ajuda a texturizar o cabelo, e você pode preparar a pele para a maquiagem e depois fixá-la. Um presente das deusas, com a fragrância Afrodite Garden<br><br></span>Geleia Iluminadora: <span>Geleia Radiante Aurora Shine vai fazer você se encantar por seu efeito glow sofisticado, embelezando sua pele com hidratação profunda, sensação refrescante de sua fórmula gel e a mesma fragrância intensa, prolongada e inesquecível.</span></p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>aurora shine</s:tag>
+    <s:tag>bogo-aura</s:tag>
+    <s:tag>kit</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8796681306280</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">198.40</s:price>
+      <s:sku/>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8644405985448</id>
+    <published>2024-09-25T09:53:36-03:00</published>
+    <updated>2024-09-25T09:53:36-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/dupla-afrodite-garden"/>
+    <title>Dupla Afrodite Garden</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/KIT-AFRODITE-GANHE-BODY-MISTICO-AFRODITE.png?v=1776719545"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            219.30
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p dir="ltr"><span><strong><br></strong>Sinta-se completamente envolvida pela fragrância Afrodite Garden. Essa fragrância floral, com flor de laranjeira e jasmim, é repleta de sensualidade e elegância. Afrodite Garden é o elixir floral perfeito para revelar a deusa que existe em você. Aproveite em dois produtos apaixonantes, o Body Splash e a Magic Butter.</span></p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>afrodite garden</s:tag>
+    <s:tag>bogo-aura</s:tag>
+    <s:tag>brinde</s:tag>
+    <s:tag>kit</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8644405985448</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">219.30</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8624383819944</id>
+    <published>2024-09-10T16:18:57-03:00</published>
+    <updated>2024-09-10T16:18:57-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/afrodite-garden-body-mistico-100ml"/>
+    <title>Body Mistico Afrodite Garden 100ml</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ILUMINADORES_BODY_MISTIC_AFRODITE.webp?v=1776719627"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            109.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>O Body Místico é um iluminador spray multiuso, que cobre de brilho tudo o que toca. Perfeito para borrifar na pele, também ajuda a texturizar o cabelo, e pode preparar a pele para a maquiagem e depois fixá-la. Um presente das deusas, com a fragrância Afrodite Garden.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>afrodite garden</s:tag>
+    <s:tag>Coll-spray-iluminador-Intg</s:tag>
+    <s:tag>ExtCode-AU001001-Intg</s:tag>
+    <s:tag>ExtId-151-Intg</s:tag>
+    <s:tag>iluminadores</s:tag>
+    <s:tag>SkuOriginal-151_0_0_U-Intg</s:tag>
+    <s:tag>spray iluminador</s:tag>
+    <s:tag>Status-Ativo-Intg</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8624383819944</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">109.00</s:price>
+      <s:sku>AU001001</s:sku>
+      <s:grams>144</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8599254499496</id>
+    <published>2024-08-22T14:01:09-03:00</published>
+    <updated>2024-08-22T14:01:09-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/aurora-shine-geleia-radiante-200g"/>
+    <title>Geleia Radiante Aurora Shine 200g</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ILUMINADORES_GELEIA_RADIANTE.webp?v=1776719662"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            149.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Geleia Radiante Aurora Shine vai fazer você se encantar por seu efeito glow sofisticado, embelezando sua pele com hidratação profunda, sensação refrescante de sua fórmula gel e a mesma fragrância intensa, prolongada e inesquecível do Body Splash Aurora Shine.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>aurora shine</s:tag>
+    <s:tag>Coll-géleia-iluminadora-Intg</s:tag>
+    <s:tag>ExtCode-AU002002-Intg</s:tag>
+    <s:tag>ExtId-150-Intg</s:tag>
+    <s:tag>geléia iluminadora</s:tag>
+    <s:tag>iluminadores</s:tag>
+    <s:tag>SkuOriginal-150_0_0_U-Intg</s:tag>
+    <s:tag>Status-Ativo-Intg</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8599254499496</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">149.00</s:price>
+      <s:sku>AU002002</s:sku>
+      <s:grams>522</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8599254106280</id>
+    <published>2024-08-22T14:00:46-03:00</published>
+    <updated>2024-08-22T14:00:46-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/afrodite-garden-magic-butter-manteiga-iluminada-desodorante-corporal-200g"/>
+    <title>Manteiga Iluminadora Afrodite Garden 200g</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ILUMINADORES_MAGIC_BUTTER_AFRODITE.webp?v=1776719882"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            139.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Magic Butter fornece uma pele desodorizada, acetinada, perfumada e radiante. Enriquecida com Manteiga de Karité e vitamina E, promove hidratação de rápida absorção e luminosidade surpreendente. Espalhe a magia com pele macia, perfumada e magicamente radiante.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>afrodite garden</s:tag>
+    <s:tag>Coll-manteiga-iluminadora-Intg</s:tag>
+    <s:tag>ExtCode-AU002006-Intg</s:tag>
+    <s:tag>ExtId-155-Intg</s:tag>
+    <s:tag>iluminadores</s:tag>
+    <s:tag>manteiga iluminadora</s:tag>
+    <s:tag>SkuOriginal-155_0_0_U-Intg</s:tag>
+    <s:tag>Status-Ativo-Intg</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8599254106280</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">139.00</s:price>
+      <s:sku>AU002006</s:sku>
+      <s:grams>278</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8599254040744</id>
+    <published>2024-08-22T14:00:40-03:00</published>
+    <updated>2024-08-22T14:00:40-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/aurora-shine-magic-butter-manteiga-iluminada-desodorante-corporal-200g"/>
+    <title>Manteiga Iluminadora Aurora Shine 200g</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ILUMINADORES_MAGIC_BUTTER_AURORA.webp?v=1776719906"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            139.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Magic Butter fornece uma pele desodorizada, acetinada, perfumada e radiante. Enriquecida com Manteiga de Karité e vitamina E, promove hidratação de rápida absorção e luminosidade surpreendente. Espalhe a magia com pele macia, perfumada e magicamente radiante.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>aurora shine</s:tag>
+    <s:tag>Coll-manteiga-iluminadora-Intg</s:tag>
+    <s:tag>ExtCode-AU002007-Intg</s:tag>
+    <s:tag>ExtId-156-Intg</s:tag>
+    <s:tag>iluminadores</s:tag>
+    <s:tag>manteiga iluminadora</s:tag>
+    <s:tag>SkuOriginal-156_0_0_U-Intg</s:tag>
+    <s:tag>Status-Ativo-Intg</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8599254040744</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">139.00</s:price>
+      <s:sku>AU002007</s:sku>
+      <s:grams>278</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8599253909672</id>
+    <published>2024-08-22T14:00:34-03:00</published>
+    <updated>2024-08-22T14:00:34-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/radiant-hera-butter-manteiga-iluminada-desodorante-corporal-200g"/>
+    <title>Manteiga Iluminadora Radiant Hera 200g</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ILUMINADORES_MAGIC_BUTTER_HERA.webp?v=1776719928"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            139.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Magic Butter fornece uma pele desodorizada, acetinada, perfumada e radiante. Enriquecida com Manteiga de Karité e vitamina E, promove hidratação de rápida absorção e luminosidade surpreendente. Espalhe a magia com pele macia, perfumada e magicamente radiante.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Coll-manteiga-iluminadora-Intg</s:tag>
+    <s:tag>ExtCode-AU002008-Intg</s:tag>
+    <s:tag>ExtId-157-Intg</s:tag>
+    <s:tag>iluminadores</s:tag>
+    <s:tag>manteiga iluminadora</s:tag>
+    <s:tag>radiant hera</s:tag>
+    <s:tag>SkuOriginal-157_0_0_U-Intg</s:tag>
+    <s:tag>Status-Ativo-Intg</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8599253909672</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">139.00</s:price>
+      <s:sku>AU002008</s:sku>
+      <s:grams>278</s:grams>
+    </s:variant>
+  </entry>
+</feed>

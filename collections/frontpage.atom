@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="pt-BR" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://aurabeautyclub.com.br/collections/all.atom</id>
+  <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/collections/all"/>
+  <link rel="self" type="application/atom+xml" href="https://aurabeautyclub.com.br/collections/frontpage.atom"/>
+  <title>AURA Beauty Club</title>
+  <updated>2026-03-17T11:39:57-03:00</updated>
+  <author>
+    <name>AURA Beauty Club</name>
+  </author>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/9346578448552</id>
+    <published>2026-03-17T11:39:57-03:00</published>
+    <updated>2026-03-17T11:39:57-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/afrodite-petals-body-splash-desodorante-corporal-200ml"/>
+    <title>Body Splash Afrodite Petals 200ml</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ALCOLICOS_BODY_SPLASH_PETASL.webp?v=1776715366"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            95.20
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>AFRODITE PETALS, a nova faceta de Afrodite</p>
+<p>Uma Afrodite que desperta ao amanhecer. Nesta faceta, a deusa Afrodite tem sua expressão mais fresca: leve como o primeiro sopro de luz, transparente como pétalas úmidas, envolta em rosas recém-colhidas, ainda tocadas pela água da noite.<br><br></p>
+<p>Assim, AFRODITE PETALS revela o real equilíbrio entre suavidade e potência... a harmonia entre corpo, emoção e natureza<strong> AFRODITE PETALS: onde seus pés tocam a terra, flores brotam.</strong></p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>body splashes</s:tag>
+    <s:tag>lancamento</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/9346578448552</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">95.20</s:price>
+      <s:sku>AU001041</s:sku>
+      <s:grams>248</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/9232827220136</id>
+    <published>2025-12-18T11:28:13-03:00</published>
+    <updated>2025-12-18T11:28:13-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/kit-lollipop-scents-3x10ml"/>
+    <title>Kit Lollipop Scents</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/PRESENTEAVEIS_LOLLIPOP_2.webp?v=1776715636"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            125.10
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p dir="ltr"><span>Neste Natal, a magia da perfumaria encontra o encanto da nostalgia. A coleção AURA Beauty 2025 apresenta o coffret Lollipop Scents, um tributo às nossas três deusas em versão miniatura, transformadas em pequenas varinhas de brilho e fragrância.<br><br></span><b></b><span>3 deusas, nas 3 cores da marca. Fácil de usar e combinar</span></p>
+<p dir="ltr"><span>- AFRODITE GARDEN<br></span><span>- VENUS LOVE<br></span><span>- ATHENA GLOW<br><br><br></span></p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>body splashes</s:tag>
+    <s:tag>kit</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/9232827220136</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">125.10</s:price>
+      <s:sku>AU001037</s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/9076710080680</id>
+    <published>2025-11-10T11:38:48-03:00</published>
+    <updated>2025-11-10T11:38:48-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/aura-beauty-desodorante-colonia-edt-100ml"/>
+    <title>Perfume AURA Beauty EDT 100ml</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ALCOLICOS_EDT.webp?v=1776717340"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            160.65
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>O despertar de uma deusa acontece quando o invisível perfuma.</p>
+<p> </p>
+<p>Não é só um perfume. É um ritual de presença.</p>
+<p>O primeiro Eau de Toilette de AURA Beauty emerge, como uma brisa antiga que já existia antes mesmo de você saber.</p>
+<p> </p>
+<p>Inspirado nas raízes oníricas e mitológicas da marca, este Deo Colonia é a fragrância que traduz a essência da AURA: uma beleza sensorial, intuitiva, mística e corajosa — feita para mulheres que vivem com brilho nos olhos e alma à flor da pele.</p>
+<p> </p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/9076710080680</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">160.65</s:price>
+      <s:sku>AU001039</s:sku>
+      <s:grams>175</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/9048401805480</id>
+    <published>2025-11-03T13:49:36-03:00</published>
+    <updated>2025-11-03T13:49:36-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/kit-mini-body-splash-trilogia-das-deusas-60ml"/>
+    <title>Kit Mini Trilogia das Deusas 3x60ml</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/PRESENTEAVEIS_TRILOGIA.webp?v=1776717545"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            111.20
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Dizem que, no princípio, três deusas caminharam entre nós, espalhando suas bênçãos sobre todas as mulheres. Cada uma delas guardava um segredo, uma força, uma essência. Agora, suas auras foram capturadas em fragrâncias únicas, reunidas em um kit lendário: a Trilogia das Deusas.</p>
+<p> </p>
+<p>Trilogia das Deusas traz as Deusas mais desejadas do Olimpo: Afrodite Garden, Aurora Shine e Radiant Hera, em embalagem de 60ml, ideal para levar com você o tempo todo,  usando junto ou separado e criando um ritual e pacto de brilho eterno.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>afrodite garden</s:tag>
+    <s:tag>aurora shine</s:tag>
+    <s:tag>body splashes</s:tag>
+    <s:tag>kit</s:tag>
+    <s:tag>perfumaria</s:tag>
+    <s:tag>radiant hera</s:tag>
+    <s:tag>ultimas-unidades</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/9048401805480</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">111.20</s:price>
+      <s:sku>AU001034</s:sku>
+      <s:grams>248</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/9157862195368</id>
+    <published>2025-10-22T11:29:06-03:00</published>
+    <updated>2025-10-22T11:29:06-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/athena-glow-splash-desodorante-corporal-200ml"/>
+    <title>Body Splash Athena Glow 200ml</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ALCOLICOS_BODY_SPLASH_ATENAS.webp?v=1776716733"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            119.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p><!-- x-tinymce/html -->ATHENA GLOW se junta ao panteão de AURA Beauty, trazendo um novo chamado : ?Que toda mulher honre sua sabedoria interior, seu magnetismo intuitivo e sua inteligência que brilha de dentro para fora.??<br><br></p>
+<p>Athena Glow irradia energia desde a saída luminosa de mandarina, toranja e groselha preta, frescor vibrante que desperta os sentidos. No coração, o jasmim se encontra com a cremosidade das notas de leite e a doçura envolvente do caramelo, revelando acolhimento e sofisticação. Por fim, a base combina a intensidade do âmbar e do sândalo com a sensualidade da baunilha, deixando um rastro inesquecível. Uma fragrância que equilibra frescor e doçura, delicadeza e força como a própria deusa que a inspira.<br><br>Ingredientes: Álcool Etílico, Água, Perfume, Glicerol, Etilhexilglicerina, citronelol, Cumarina, Geraniol, Hidroxicitronelal, Limoneno.<br><br>Modo de uso: Aplique no corpo sempre que desejar. Recomendamos reaplicação ao longo do dia para manter a perfumação e frescor renovado.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>body splashes</s:tag>
+    <s:tag>perfumaria</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/9157862195368</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">119.00</s:price>
+      <s:sku>AU001035</s:sku>
+      <s:grams>248</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8991200673960</id>
+    <published>2025-06-05T10:42:36-03:00</published>
+    <updated>2025-06-05T10:42:36-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/venus-love-body-mistico-100ml"/>
+    <title>Body Mistico Venus Love 100ml</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ILUMINADORES_BODY_MISTIC_VENUS.webp?v=1776718678"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            109.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>O Body Místico é um spray iluminador multiuso, que cobre de glow tudo que toca. Perfeito para borrifar na pele, também ajuda a texturizar e perfumar o cabelo, e você pode preparar a pele para a maquiagem e depois fixá-la. Perfeito para ser usado como Hair Mist, perfumando, cuidando e iluminando seu cabelo como nenhum outro. Um presente das deusas, com a fragrância Venus Love</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>spray iluminador</s:tag>
+    <s:tag>venus love</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8991200673960</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">109.00</s:price>
+      <s:sku>AU001032</s:sku>
+      <s:grams>144</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8991201493160</id>
+    <published>2025-06-05T10:42:12-03:00</published>
+    <updated>2025-06-05T10:42:12-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/venus-love-body-splash-desodorante-corporal-200ml"/>
+    <title>Body Splash Venus Love 200ml</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ALCOLICOS_BODY_SPLASH_VENUS.webp?v=1776718628"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            119.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>VENUS LOVE chega como a quarta Deusa de AURA Beauty para integrar o sucesso da linha de Body Splashes. Venus Love é uma celebração irresistível da doçura envolvente e da sensualidade cremosa. Venus Love é para quem deseja exalar doçura, charme e uma paixão quase celestial – como o beijo de uma deusa que é pura tentação.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>body splashes</s:tag>
+    <s:tag>venus love</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8991201493160</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">119.00</s:price>
+      <s:sku>AU001030</s:sku>
+      <s:grams>248</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8943032238248</id>
+    <published>2025-05-06T23:20:09-03:00</published>
+    <updated>2025-05-06T23:20:09-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/duo-de-oleos-multifenomenal-afrodite-garden"/>
+    <title>Duo Óleos Multifuncionais - Afrodite Garden 2x30ml</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ILUMINADORES_DUO_DE_OLEOS.webp?v=1776718742"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            208.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Uma dupla de óleos multifuncionais iluminadores, nas cores dourada e prateada, trazendo o Brilho do Sol e o Brilho da Lua. Ideal para rosto, corpo e cabelos, é enriquecido com mica, iluminando e perfumando a pele. Sua textura leve e acabamento acetinado são combinados à Vitamina E, tornando-o perfeito para todos os tipos de pele e cabelo, com ingredientes hidratantes e antioxidantes.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>afrodite garden</s:tag>
+    <s:tag>duo oleo</s:tag>
+    <s:tag>iluminadores</s:tag>
+    <s:tag>Status-Ativo-Intg</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8943032238248</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">208.00</s:price>
+      <s:sku>AU002026</s:sku>
+      <s:grams>175</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://aurabeautyclub.com.br/products/8870839287976</id>
+    <published>2025-03-26T09:52:00-03:00</published>
+    <updated>2025-03-26T09:52:00-03:00</updated>
+    <link rel="alternate" type="text/html" href="https://aurabeautyclub.com.br/products/aurora-shine-gotas-iluminadas-primer-acetinado-30ml"/>
+    <title>Primer Acetinado Gotas Iluminadas Aurora Shine 30ml</title>
+    <s:type></s:type>
+    <s:vendor>AURA Beauty Club</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0664/9937/9368/files/ILUMINADORES_PRIMER_ILUMINADOR.webp?v=1776718911"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Fornecedor: </strong>AURA Beauty Club<br>
+        <strong>Tipo: </strong><br>
+        <strong>Preço: </strong>
+            189.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>Com acabamento acetinado e textura perolada, é um primer que proporciona um viço saudável, deixando o rosto, pescoço e colo com uma aparência fascinante e naturalmente cuidada. Enriquecido com niacinamida e ácido hialurônico, prepara a pele para maquiagem ou a deixa naturalmente luminosa. É indicado para todos os tipos de pele</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>aurora shine</s:tag>
+    <s:tag>iluminadores</s:tag>
+    <s:tag>primer</s:tag>
+    <s:tag>ultimas-unidades</s:tag>
+    <s:variant>
+      <id>https://aurabeautyclub.com.br/products/8870839287976</id>
+      <title>Default Title</title>
+      <s:price currency="BRL">189.00</s:price>
+      <s:sku>AU006025</s:sku>
+      <s:grams>135</s:grams>
+    </s:variant>
+  </entry>
+</feed>
