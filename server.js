@@ -413,10 +413,27 @@ async function pagouRequest(method, endpoint, body) {
 }
 
 // ─── Utmify helper ────────────────────────────────────────────────────────────
+function utcNowStr() {
+  return new Date().toISOString().replace('T', ' ').slice(0, 19);
+}
+
+function normalizeUtmData(raw) {
+  const src = raw && typeof raw === 'object' ? raw : {};
+  return {
+    src:          src.src          || null,
+    sck:          src.sck          || null,
+    utm_source:   src.utm_source   || null,
+    utm_campaign: src.utm_campaign || null,
+    utm_medium:   src.utm_medium   || null,
+    utm_content:  src.utm_content  || null,
+    utm_term:     src.utm_term     || null,
+  };
+}
+
 async function sendToUtmify(payload) {
   if (!UTMIFY_TOKEN) return;
   try {
-    await fetch('https://api.utmify.com.br/api-credentials/orders', {
+    const res = await fetch('https://api.utmify.com.br/api-credentials/orders', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -424,34 +441,68 @@ async function sendToUtmify(payload) {
       },
       body: JSON.stringify(payload),
     });
-  } catch {}
+    if (!res.ok) {
+      const text = await res.text().catch(() => '');
+      console.error('[Utmify] Envio falhou', res.status, text.slice(0, 400));
+    }
+  } catch (err) {
+    console.error('[Utmify] Erro de rede:', err.message);
+  }
 }
 
-function buildUtmifyPayload(orderId, status, customer, items, totalCents, utmData) {
-  const totalBrl = totalCents / 100;
+/**
+ * @param {object} opts
+ * @param {string}  opts.orderId
+ * @param {'waiting_payment'|'paid'|'refused'|'refunded'|'chargedback'} opts.status
+ * @param {'pix'|'credit_card'} opts.paymentMethod
+ * @param {object}  opts.customer
+ * @param {Array}   opts.items
+ * @param {number}  opts.totalCents
+ * @param {object}  opts.utmData
+ * @param {string}  [opts.createdAt]   UTC "YYYY-MM-DD HH:MM:SS" — use o da criação original
+ * @param {string}  [opts.clientIp]
+ */
+function buildUtmifyPayload({ orderId, status, paymentMethod, customer, items, totalCents, utmData, createdAt, clientIp }) {
+  const now = utcNowStr();
+  const safeCustomer = customer && typeof customer === 'object' ? customer : {};
+  const docDigits = String(safeCustomer.document || '').replace(/\D/g, '');
+  const phoneDigits = String(safeCustomer.phone || '').replace(/\D/g, '');
+
+  const products = (items || []).length > 0
+    ? (items || []).map(it => ({
+        id: String(it.variant_id || it.id || ''),
+        name: String(it.product_title || it.title || 'Produto'),
+        planId: null,
+        planName: null,
+        quantity: it.quantity || 1,
+        priceInCents: it.price || 0,
+      }))
+    : [{ id: 'aura', name: 'Pedido AURA Beauty Club', planId: null, planName: null, quantity: 1, priceInCents: totalCents }];
+
   return {
     orderId: String(orderId),
-    platform: 'other',
-    paymentMethod: 'pix',
+    platform: 'AuraBeautyClub',
+    paymentMethod: paymentMethod || 'pix',
     status,
-    createdAt: new Date().toISOString().replace('T', ' ').slice(0, 19),
-    approvedDate: status === 'paid' ? new Date().toISOString().replace('T', ' ').slice(0, 19) : null,
+    createdAt: createdAt || now,
+    approvedDate: (status === 'paid') ? now : null,
+    refundedAt: null,
     customer: {
-      name: customer.name || '',
-      email: customer.email || '',
-      phone: customer.phone || '',
-      document: customer.document || '',
+      name:     (safeCustomer.name || '').trim() || 'Cliente',
+      email:    (safeCustomer.email || '').trim(),
+      phone:    phoneDigits || null,
+      document: docDigits || null,
+      country:  'BR',
+      ...(clientIp ? { ip: clientIp } : {}),
     },
-    products: (items || []).map(it => ({
-      id: String(it.variant_id || it.id || ''),
-      name: it.product_title || it.title || 'Produto',
-      planId: null,
-      planName: null,
-      quantity: it.quantity || 1,
-      priceInCents: it.price || 0,
-    })),
-    trackingParameters: utmData || {},
-    commission: { totalPriceInCents: totalCents, gatewayFeeInCents: 0, userCommissionInCents: totalCents },
+    products,
+    trackingParameters: normalizeUtmData(utmData),
+    commission: {
+      totalPriceInCents:      totalCents,
+      gatewayFeeInCents:      0,
+      userCommissionInCents:  totalCents,
+      currency:               'BRL',
+    },
     isTest: PAGOU_ENV !== 'production',
   };
 }
@@ -468,6 +519,9 @@ app.get('/api/config', (req, res) => {
 
 app.post('/api/create-pix', async (req, res) => {
   try {
+    const clientIp = req.headers['x-forwarded-for']
+      ? String(req.headers['x-forwarded-for']).split(',')[0].trim()
+      : req.socket?.remoteAddress || '';
     const { customer, utmData, shippingCents: rawShipping } = req.body;
     const shippingCents = Math.min(500000, Math.max(0, Math.round(Number(rawShipping) || 0)));
     const subtotal = cart.total_price;
@@ -512,17 +566,30 @@ app.post('/api/create-pix', async (req, res) => {
 
     // Save pending order
     const pending = readPendingOrders();
+    const createdAtStr = utcNowStr();
     pending[txId] = {
       customer: safeCustomer,
       items: cart.items,
       totalCents,
       utmData: utmData || {},
-      createdAt: Date.now(),
+      createdAt: createdAtStr,
+      paymentMethod: 'pix',
+      clientIp,
     };
     writePendingOrders(pending);
 
     // Notify Utmify: waiting_payment
-    await sendToUtmify(buildUtmifyPayload(txId, 'waiting_payment', safeCustomer, cart.items, totalCents, utmData));
+    await sendToUtmify(buildUtmifyPayload({
+      orderId: txId,
+      status: 'waiting_payment',
+      paymentMethod: 'pix',
+      customer: safeCustomer,
+      items: cart.items,
+      totalCents,
+      utmData,
+      createdAt: createdAtStr,
+      clientIp,
+    }));
 
     res.json({
       transactionId: txId,
@@ -539,6 +606,9 @@ app.post('/api/create-pix', async (req, res) => {
 
 app.post('/api/create-card', async (req, res) => {
   try {
+    const clientIp = req.headers['x-forwarded-for']
+      ? String(req.headers['x-forwarded-for']).split(',')[0].trim()
+      : req.socket?.remoteAddress || '';
     const { customer, cardToken, installments, utmData, shippingCents: rawShipping } = req.body;
     const shippingCents = Math.min(500000, Math.max(0, Math.round(Number(rawShipping) || 0)));
     const subtotal = cart.total_price;
@@ -571,18 +641,28 @@ app.post('/api/create-card', async (req, res) => {
     const txId = data.data.id;
     const payStatus = data.data.status;
 
+    const createdAtStr = utcNowStr();
     if (payStatus === 'paid' || payStatus === 'approved') {
       cart.items = [];
       recalcCart();
-      await sendToUtmify(buildUtmifyPayload(txId, 'paid', safeCustomer, [], totalCents, utmData));
+      await sendToUtmify(buildUtmifyPayload({
+        orderId: txId, status: 'paid', paymentMethod: 'credit_card',
+        customer: safeCustomer, items: [], totalCents, utmData, createdAt: createdAtStr, clientIp,
+      }));
       return res.json({ ok: true, status: 'paid', redirect: '/checkout-obrigado.html' });
     }
 
     const pending = readPendingOrders();
-    pending[txId] = { customer: safeCustomer, items: [], totalCents, utmData: utmData || {}, createdAt: Date.now() };
+    pending[txId] = {
+      customer: safeCustomer, items: [], totalCents, utmData: utmData || {},
+      createdAt: createdAtStr, paymentMethod: 'credit_card', clientIp,
+    };
     writePendingOrders(pending);
 
-    await sendToUtmify(buildUtmifyPayload(txId, 'waiting_payment', safeCustomer, cart.items, totalCents, utmData));
+    await sendToUtmify(buildUtmifyPayload({
+      orderId: txId, status: 'waiting_payment', paymentMethod: 'credit_card',
+      customer: safeCustomer, items: cart.items, totalCents, utmData, createdAt: createdAtStr, clientIp,
+    }));
     res.json({ ok: true, status: payStatus, transactionId: txId });
   } catch (err) {
     console.error('/api/create-card', err);
@@ -603,7 +683,13 @@ app.get('/api/pix-status/:id', async (req, res) => {
       const pending = readPendingOrders();
       const order = pending[id];
       if (order) {
-        await sendToUtmify(buildUtmifyPayload(id, 'paid', order.customer, order.items, order.totalCents, order.utmData));
+        await sendToUtmify(buildUtmifyPayload({
+          orderId: id, status: 'paid',
+          paymentMethod: order.paymentMethod || 'pix',
+          customer: order.customer, items: order.items,
+          totalCents: order.totalCents, utmData: order.utmData,
+          createdAt: order.createdAt, clientIp: order.clientIp,
+        }));
         delete pending[id];
         writePendingOrders(pending);
       }
@@ -626,7 +712,13 @@ app.post('/api/webhook-pagou', async (req, res) => {
       const pending = readPendingOrders();
       const order = pending[id];
       if (order) {
-        await sendToUtmify(buildUtmifyPayload(id, 'paid', order.customer, order.items, order.totalCents, order.utmData));
+        await sendToUtmify(buildUtmifyPayload({
+          orderId: id, status: 'paid',
+          paymentMethod: order.paymentMethod || 'pix',
+          customer: order.customer, items: order.items,
+          totalCents: order.totalCents, utmData: order.utmData,
+          createdAt: order.createdAt, clientIp: order.clientIp,
+        }));
         delete pending[id];
         writePendingOrders(pending);
       }
@@ -757,9 +849,13 @@ app.get('*', (req, res, next) => {
   next();
 });
 
-// ─── Static files with aura-cart-add-fix.js injection ────────────────────────
-const INJECT_SCRIPT = '    <script src="/cdn/shop/t/175/assets/aura-cart-add-fix.js" defer></script>\n';
-const MARKER = 'aura-cart-add-fix.js';
+// ─── Static files: script injection before </body> ───────────────────────────
+const INJECT_MARKER = 'aura-cart-add-fix.js';
+const INJECT_SCRIPTS = [
+  '    <script src="/cdn/shop/t/175/assets/aura-utm-capture.js"></script>',
+  '    <script src="/cdn/shop/t/175/assets/aura-cart-add-fix.js" defer></script>',
+  '    <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>',
+].join('\n') + '\n';
 
 app.use((req, res, next) => {
   let fsPath = req.path.replace(/^\//, '') || 'index';
@@ -772,8 +868,8 @@ app.use((req, res, next) => {
   if (fsPath.endsWith('.html') && fs.existsSync(fullPath)) {
     try {
       let html = fs.readFileSync(fullPath, 'utf8');
-      if (!html.includes(MARKER) && html.includes('</body>')) {
-        html = html.replace('</body>', INJECT_SCRIPT + '</body>');
+      if (!html.includes(INJECT_MARKER) && html.includes('</body>')) {
+        html = html.replace('</body>', INJECT_SCRIPTS + '</body>');
       }
       res.setHeader('Content-Type', 'text/html; charset=utf-8');
       res.setHeader('Cache-Control', 'no-store');

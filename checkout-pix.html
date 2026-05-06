@@ -240,10 +240,12 @@
         var total = (cart.total_price || 0) + ship;
         applyTotalsToUi(total);
         var shipCents = getShippingCents();
+        var utmData = {};
+        try { utmData = JSON.parse(localStorage.getItem('aura_utm_params') || '{}'); } catch (e) {}
         return fetch('/api/create-pix', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ customer: customer, shippingCents: shipCents }),
+          body: JSON.stringify({ customer: customer, shippingCents: shipCents, utmData: utmData }),
         });
       })
       .then(function (r) { return r.json(); })
