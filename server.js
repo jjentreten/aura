@@ -4,6 +4,7 @@ require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+const QRCode = require('qrcode');
 
 const app = express();
 const PORT = Number.parseInt(process.env.PORT || '', 10) || 8080;
@@ -302,16 +303,27 @@ function buildPagouBuyer(customer) {
   return buyer;
 }
 
-/** Preços em centavos por unidade (mesmo formato que `amount`). */
-function buildPagouProducts(items) {
+/** Preços em centavos por unidade (mesmo formato que `amount`). Inclui frete como linha para bater com `amount`. */
+function buildPagouProducts(items, shippingCents) {
+  let lines;
   if (!items || !items.length) {
-    return [{ name: 'Pedido AURA Beauty Club', quantity: 1, price: 100 }];
+    lines = [{ name: 'Pedido AURA Beauty Club', quantity: 1, price: 100 }];
+  } else {
+    lines = items.map(it => ({
+      name: String(it.product_title || it.title || 'Produto').slice(0, 256),
+      quantity: it.quantity || 1,
+      price: Math.round(it.price || 0),
+    }));
   }
-  return items.map(it => ({
-    name: String(it.product_title || it.title || 'Produto').slice(0, 256),
-    quantity: it.quantity || 1,
-    price: Math.round(it.price || 0),
-  }));
+  const ship = Math.min(500000, Math.max(0, Math.round(Number(shippingCents) || 0)));
+  if (ship > 0) {
+    lines.push({ name: 'Frete', quantity: 1, price: ship });
+  }
+  return lines;
+}
+
+function pagouProductsSumCents(lines) {
+  return lines.reduce((s, l) => s + Math.round(l.price || 0) * Math.max(1, l.quantity || 1), 0);
 }
 
 function pagouErrorMessage(data) {
@@ -330,6 +342,45 @@ function pagouErrorMessage(data) {
     return parts.filter(Boolean).join('; ') || 'Erro de validação no Pagou';
   }
   return 'Erro ao processar pagamento no Pagou';
+}
+
+/** Extrai string Pix copia-e-cola (EMV) independentemente do nome do campo na resposta Pagou. */
+function extractPixEmv(pix) {
+  if (!pix || typeof pix !== 'object') return '';
+  const ordered = [
+    pix.copy_paste,
+    pix.copyPaste,
+    pix.emv,
+    pix.payload,
+    pix.br_code,
+    pix.qr_code_text,
+    pix.qrcode_text,
+    pix.code,
+    pix.qr_code,
+  ];
+  for (const v of ordered) {
+    if (typeof v === 'string') {
+      const t = v.trim();
+      if (t) return t;
+    }
+  }
+  return '';
+}
+
+async function pixEmvToPngDataUrl(emv) {
+  const s = String(emv || '').trim();
+  if (!s) return null;
+  try {
+    return await QRCode.toDataURL(s, {
+      width: 316,
+      margin: 2,
+      errorCorrectionLevel: 'M',
+      color: { dark: '#000000', light: '#ffffff' },
+    });
+  } catch (err) {
+    console.error('[PIX] Geração do QR falhou:', err.message);
+    return null;
+  }
 }
 
 async function pagouRequest(method, endpoint, body) {
@@ -417,21 +468,33 @@ app.get('/api/config', (req, res) => {
 
 app.post('/api/create-pix', async (req, res) => {
   try {
-    const { customer, utmData } = req.body;
-    const totalCents = cart.total_price;
-    if (!totalCents) return res.status(400).json({ error: 'Carrinho vazio' });
+    const { customer, utmData, shippingCents: rawShipping } = req.body;
+    const shippingCents = Math.min(500000, Math.max(0, Math.round(Number(rawShipping) || 0)));
+    const subtotal = cart.total_price;
+    if (!subtotal) return res.status(400).json({ error: 'Carrinho vazio' });
+    const totalCents = subtotal + shippingCents;
     if (!String(PAGOU_API_KEY).trim()) {
       return res.status(503).json({ error: 'Pagamento PIX indisponível: configure PAGOU_API_KEY no servidor.' });
     }
 
     const safeCustomer = customer && typeof customer === 'object' ? customer : {};
+    const products = buildPagouProducts(cart.items, shippingCents);
+    if (pagouProductsSumCents(products) !== totalCents) {
+      console.error('[PIX] Inconsistência valor produtos vs total', {
+        totalCents,
+        sum: pagouProductsSumCents(products),
+        subtotal,
+        shippingCents,
+      });
+    }
+
     const pagouBody = {
       external_ref: nextPagouExternalRef(),
       method: 'pix',
       amount: totalCents,
       currency: 'BRL',
       buyer: buildPagouBuyer(safeCustomer),
-      products: buildPagouProducts(cart.items),
+      products,
       notify_url: pagouNotifyUrl(),
     };
 
@@ -443,8 +506,9 @@ app.post('/api/create-pix', async (req, res) => {
 
     const txId = data.data.id;
     const pix = data.data.pix || {};
-    const brCode = pix.code || pix.qr_code || '';
-    const qrCode = pix.qr_code || pix.qr_code_base64 || pix.code;
+    const emv = extractPixEmv(pix);
+    if (!emv) console.warn('[PIX] Transação criada mas sem payload Pix nos campos conhecidos:', Object.keys(pix));
+    const qrImageDataUrl = emv ? await pixEmvToPngDataUrl(emv) : null;
 
     // Save pending order
     const pending = readPendingOrders();
@@ -460,7 +524,13 @@ app.post('/api/create-pix', async (req, res) => {
     // Notify Utmify: waiting_payment
     await sendToUtmify(buildUtmifyPayload(txId, 'waiting_payment', safeCustomer, cart.items, totalCents, utmData));
 
-    res.json({ transactionId: txId, qrCode: qrCode || brCode, pixCode: brCode || qrCode });
+    res.json({
+      transactionId: txId,
+      pixCode: emv,
+      qrCode: emv,
+      qrImageDataUrl,
+      amountCents: totalCents,
+    });
   } catch (err) {
     console.error('/api/create-pix', err);
     res.status(500).json({ error: 'Erro interno' });
@@ -469,14 +539,17 @@ app.post('/api/create-pix', async (req, res) => {
 
 app.post('/api/create-card', async (req, res) => {
   try {
-    const { customer, cardToken, installments, utmData } = req.body;
-    const totalCents = cart.total_price;
-    if (!totalCents) return res.status(400).json({ error: 'Carrinho vazio' });
+    const { customer, cardToken, installments, utmData, shippingCents: rawShipping } = req.body;
+    const shippingCents = Math.min(500000, Math.max(0, Math.round(Number(rawShipping) || 0)));
+    const subtotal = cart.total_price;
+    if (!subtotal) return res.status(400).json({ error: 'Carrinho vazio' });
+    const totalCents = subtotal + shippingCents;
     if (!String(PAGOU_API_KEY).trim()) {
       return res.status(503).json({ error: 'Pagamento com cartão indisponível: configure PAGOU_API_KEY no servidor.' });
     }
 
     const safeCustomer = customer && typeof customer === 'object' ? customer : {};
+    const products = buildPagouProducts(cart.items, shippingCents);
     const pagouBody = {
       external_ref: nextPagouExternalRef(),
       method: 'credit_card',
@@ -485,7 +558,7 @@ app.post('/api/create-card', async (req, res) => {
       token: cardToken,
       installments: Number(installments) || 1,
       buyer: buildPagouBuyer(safeCustomer),
-      products: buildPagouProducts(cart.items),
+      products,
       notify_url: pagouNotifyUrl(),
     };
 

@@ -21,7 +21,7 @@
     <div class="andes-card andes-card--outline andes-card--primary andes-card--padding-0" id="_r_0_" data-andes-card="true" data-andes-card-hierarchy="primary">
       <div class="andes-card__content" data-andes-card-content="true">
         <div class="styles_pixPaymentInformativeCardContainer__nC2T3">
-          <span class="andes-typography andes-typography--type-title andes-typography--size-s andes-typography--color-primary andes-typography--weight-regular" id="pix-headline">Falta pouco! Agora pague R$ 143.37 via Pix para finalizar sua compra</span>
+          <span class="andes-typography andes-typography--type-title andes-typography--size-s andes-typography--color-primary andes-typography--weight-regular" id="pix-headline">Carregando valor do pedido…</span>
           <span>
             <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" fill="none" aria-hidden="true">
               <rect width="54" height="54" x="1" y="1" fill="#fff" rx="27"></rect>
@@ -56,7 +56,7 @@
               <div class="andes-form-control__control">
                 <input id="copy-paste-pix-code" class="andes-form-control__field" rows="1"
                        data-andes-textfield-input="true" data-andes-textfield-input-type="input" readonly
-                       value="00020126580014br.gov.bcb.pix01360101078c-2cf4-4cd4-ac45-ba2215a5752b5204000053039865406143.375802BR5916BA202409041623586009Sao Paulo62250521mpqrinter1571157981416304B25C">
+                       value="">
               </div>
             </div>
             <button type="button" class="andes-button andes-button--large andes-button--loud andes-button--full-width" id="btn-copy-pix" data-andes-button="true" data-andes-button-hierarchy="loud" data-andes-button-size="large">
@@ -84,18 +84,18 @@
       <strong class="andes-typography andes-typography--type-body andes-typography--size-m andes-typography--color-primary andes-typography--weight-semibold">Detalhes do pedido</strong>
       <div>
         <span class="andes-typography andes-typography--type-body andes-typography--size-s andes-typography--color-primary andes-typography--weight-regular">Informações de contato</span>
-        <p class="andes-typography andes-typography--type-body andes-typography--size-s andes-typography--color-primary andes-typography--weight-regular" id="pix-customer-email">isabeteh92@gmail.com</p>
+        <p class="andes-typography andes-typography--type-body andes-typography--size-s andes-typography--color-primary andes-typography--weight-regular" id="pix-customer-email">—</p>
       </div>
       <div>
         <span class="andes-typography andes-typography--type-body andes-typography--size-s andes-typography--color-primary andes-typography--weight-regular">Endereço de cobrança</span>
-        <p class="andes-typography andes-typography--type-body andes-typography--size-s andes-typography--color-primary andes-typography--weight-regular" id="pix-billing-name">Isabele Sousa</p>
-        <p class="andes-typography andes-typography--type-body andes-typography--size-s andes-typography--color-primary andes-typography--weight-regular" id="pix-billing-line1">Rua Canção das Gaivotas, ⁠29</p>
-        <p class="andes-typography andes-typography--type-body andes-typography--size-s andes-typography--color-primary andes-typography--weight-regular" id="pix-billing-line2">Florianópolis, Santa Catarina</p>
+        <p class="andes-typography andes-typography--type-body andes-typography--size-s andes-typography--color-primary andes-typography--weight-regular" id="pix-billing-name">—</p>
+        <p class="andes-typography andes-typography--type-body andes-typography--size-s andes-typography--color-primary andes-typography--weight-regular" id="pix-billing-line1">—</p>
+        <p class="andes-typography andes-typography--type-body andes-typography--size-s andes-typography--color-primary andes-typography--weight-regular" id="pix-billing-line2">—</p>
       </div>
       <hr>
       <div>
         <strong class="andes-typography andes-typography--type-body andes-typography--size-l andes-typography--color-primary andes-typography--weight-semibold">Total</strong>
-        <strong class="andes-typography andes-typography--type-body andes-typography--size-l andes-typography--color-primary andes-typography--weight-semibold" id="pix-order-total">R$143.37</strong>
+        <strong class="andes-typography andes-typography--type-body andes-typography--size-l andes-typography--color-primary andes-typography--weight-semibold" id="pix-order-total">—</strong>
       </div>
     </div>
     <div class="styles_backStoreMobile__oUfFR">
@@ -136,6 +136,34 @@
     }
   });
 
+  function fmtBRLNbsp(cents) {
+    var s = (Number(cents) / 100).toLocaleString('pt-BR', {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
+    return 'R$\u00a0' + s;
+  }
+
+  function getShippingCents() {
+    try {
+      var raw = sessionStorage.getItem('aura_mock_shipping_cents');
+      if (raw == null || raw === '') return 0;
+      return parseInt(raw, 10) || 0;
+    } catch (e) {
+      return 0;
+    }
+  }
+
+  function applyTotalsToUi(totalCents) {
+    var headline = document.getElementById('pix-headline');
+    var totalEl = document.getElementById('pix-order-total');
+    var fmt = fmtBRLNbsp(totalCents);
+    if (headline) {
+      headline.textContent = 'Falta pouco! Agora pague ' + fmt + ' via Pix para finalizar sua compra';
+    }
+    if (totalEl) totalEl.textContent = fmt;
+  }
+
   function showError(msg) {
     var banner = document.getElementById('pix-error-banner');
     if (banner) { banner.textContent = msg; banner.removeAttribute('hidden'); }
@@ -157,6 +185,26 @@
       .catch(function () {});
   }
 
+  /** QR no navegador só se o servidor não mandou imagem (CDN/local). */
+  function setQrImage(imgEl, payload) {
+    if (!imgEl || !payload) return;
+    var brCode = String(payload).trim();
+    if (!brCode) return;
+    if (/^data:image\//i.test(brCode)) {
+      imgEl.src = brCode;
+      return;
+    }
+    if (typeof QRCode !== 'undefined') {
+      QRCode.toDataURL(brCode, { width: 158, margin: 2, errorCorrectionLevel: 'M' }, function (err, url) {
+        if (!err && url) imgEl.src = url;
+      });
+      return;
+    }
+    if (brCode.length > 64 && !/^000201/.test(brCode)) {
+      imgEl.src = 'data:image/png;base64,' + brCode;
+    }
+  }
+
   function initPix() {
     var info = {};
     try { info = JSON.parse(sessionStorage.getItem('aura_checkout_info') || '{}'); } catch (e) {}
@@ -168,47 +216,62 @@
       phone: info.phone || '',
     };
 
-    // Populate details sidebar
-    if (info.email) document.getElementById('pix-customer-email').textContent = info.email;
-    if (customer.name && customer.name !== 'Cliente') document.getElementById('pix-billing-name').textContent = customer.name;
-    var addr1 = [info.streetName || info.address1, info.streetNumber].filter(Boolean).join(', ');
-    var addr2 = [info.city, info.province || info.zone].filter(Boolean).join(', ');
-    if (addr1) document.getElementById('pix-billing-line1').textContent = addr1;
-    if (addr2) document.getElementById('pix-billing-line2').textContent = addr2;
+    var emailEl = document.getElementById('pix-customer-email');
+    var nameEl = document.getElementById('pix-billing-name');
+    var line1El = document.getElementById('pix-billing-line1');
+    var line2El = document.getElementById('pix-billing-line2');
+    if (emailEl) emailEl.textContent = info.email || '—';
+    if (nameEl) nameEl.textContent = (customer.name && customer.name !== 'Cliente') ? customer.name : '—';
 
-    fetch('/api/create-pix', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ customer: customer }),
-    })
+    var addr1 = [info.streetName || info.address1, info.streetNumber].filter(Boolean).join(', ');
+    var nb = info.neighborhood || info.line2 || '';
+    var cityPostal = [info.postalCode, info.city, info.province || info.zone].filter(Boolean).join(' ');
+    var addr2 = [nb, cityPostal].filter(Boolean).join(' · ');
+    if (line1El) line1El.textContent = addr1 || '—';
+    if (line2El) line2El.textContent = addr2 || '—';
+
+    fetch('/cart.js', { credentials: 'same-origin', headers: { Accept: 'application/json' } })
+      .then(function (r) {
+        if (!r.ok) throw new Error('cart');
+        return r.json();
+      })
+      .then(function (cart) {
+        var ship = getShippingCents();
+        var total = (cart.total_price || 0) + ship;
+        applyTotalsToUi(total);
+        var shipCents = getShippingCents();
+        return fetch('/api/create-pix', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ customer: customer, shippingCents: shipCents }),
+        });
+      })
       .then(function (r) { return r.json(); })
       .then(function (d) {
         if (d.error) { showError(d.error); return; }
         transactionId = d.transactionId;
-        var rawQr = d.qrCode || '';
-        var brCode = (d.pixCode || rawQr || '').trim();
+
+        if (typeof d.amountCents === 'number' && d.amountCents > 0) {
+          applyTotalsToUi(d.amountCents);
+        }
+
+        var brCode = (d.pixCode || d.qrCode || '').trim();
         if (input && brCode) input.value = brCode;
+
         var imgEl = document.getElementById('pix-qr-placeholder');
         if (imgEl && brCode) {
-          if (/^data:image\//i.test(rawQr)) {
-            imgEl.src = rawQr;
-          } else if (typeof QRCode !== 'undefined' && /^000201/.test(brCode)) {
-            QRCode.toDataURL(brCode, { width: 158, margin: 2, errorCorrectionLevel: 'M' }, function (err, url) {
-              if (!err && url) imgEl.src = url;
-            });
-          } else if (rawQr && !/^000201/.test(rawQr)) {
-            imgEl.src = 'data:image/png;base64,' + rawQr;
-          } else if (typeof QRCode !== 'undefined') {
-            QRCode.toDataURL(brCode, { width: 158, margin: 2, errorCorrectionLevel: 'M' }, function (err, url) {
-              if (!err && url) imgEl.src = url;
-            });
+          if (d.qrImageDataUrl && /^data:image\//i.test(d.qrImageDataUrl)) {
+            imgEl.src = d.qrImageDataUrl;
+          } else {
+            setQrImage(imgEl, brCode);
           }
         }
+
         pollTimer = setInterval(pollStatus, 5000);
       })
       .catch(function (err) {
         console.error(err);
-        showError('Erro ao gerar PIX. Tente novamente.');
+        showError('Erro ao gerar PIX ou carregar o carrinho. Tente novamente.');
       });
   }
 
