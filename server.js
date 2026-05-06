@@ -33,7 +33,7 @@ function writePendingOrders(data) {
 
 // ─── Catalog & cart ───────────────────────────────────────────────────────────
 const CATALOG = JSON.parse(fs.readFileSync(path.join(ROOT, 'product_catalog.json'), 'utf8'));
-const FREE_SHIPPING_TARGET = 15900;
+const FREE_SHIPPING_TARGET = 14990;
 
 let cart = {
   token: 'mock_token_aura',
@@ -52,12 +52,64 @@ let cart = {
   discount_codes: [],
 };
 
+const COUPON_MIN_SUBTOTAL = 19990; // R$ 199,90
+const COUPON_AMOUNT_OFF = 4000; // R$ 40,00
+
 function recalcCart() {
   const sub = cart.items.reduce((s, i) => s + i.line_price, 0);
   cart.original_total_price = sub;
-  cart.total_price = sub;
   cart.items_subtotal_price = sub;
   cart.item_count = cart.items.reduce((s, i) => s + i.quantity, 0);
+  applyCartDiscounts();
+}
+
+function normalizeCouponCode(code) {
+  return String(code || '').trim().toUpperCase();
+}
+
+function getActiveCouponCode() {
+  const dc = Array.isArray(cart.discount_codes) ? cart.discount_codes : [];
+  if (!dc.length) return null;
+  const code = dc[0] && dc[0].code;
+  const norm = normalizeCouponCode(code);
+  return norm || null;
+}
+
+function applyCartDiscounts() {
+  const sub = cart.items_subtotal_price || 0;
+  const code = getActiveCouponCode();
+
+  cart.cart_level_discount_applications = [];
+  cart.total_discount = 0;
+
+  if (code === 'AURA' || code === 'AURA40') {
+    if (sub >= COUPON_MIN_SUBTOTAL) {
+      const amt = Math.min(COUPON_AMOUNT_OFF, sub);
+      cart.total_discount = amt;
+      cart.cart_level_discount_applications = [
+        {
+          type: 'discount_code',
+          key: `disc:${code}`,
+          title: code,
+          description: `R$ 40 OFF acima de R$ 199,90`,
+          value: (amt / 100),
+          value_type: 'fixed_amount',
+          total_allocated_amount: amt,
+        },
+      ];
+      cart.discount_codes = [{ code, amount: String((amt / 100).toFixed(2)), type: 'fixed_amount' }];
+    } else {
+      // Mantém o código salvo para UI, mas não aplica desconto (pra mostrar aviso no frontend).
+      cart.discount_codes = [{ code, amount: '0.00', type: 'fixed_amount' }];
+    }
+  } else if (code) {
+    // Código desconhecido: não aplica.
+    cart.discount_codes = [{ code, amount: '0.00', type: 'fixed_amount' }];
+  } else {
+    cart.discount_codes = [];
+  }
+
+  cart.total_price = Math.max(0, sub - (cart.total_discount || 0));
 }
 
 function makeCartItem(variantId, quantity = 1) {
@@ -65,12 +117,16 @@ function makeCartItem(variantId, quantity = 1) {
   const p = CATALOG[vid];
   if (!p) return null;
   const qty = Math.max(1, quantity);
+  const compareAt = p.compare_at_price != null ? p.compare_at_price : p.price;
   return {
     id: p.id, properties: {}, quantity: qty,
     variant_id: p.variant_id, key: `${p.variant_id}:mock`,
-    title: p.title, price: p.price, original_price: p.price,
+    title: p.title,
+    price: p.price,
+    original_price: compareAt,
+    compare_at_price: p.compare_at_price != null ? p.compare_at_price : null,
     discounted_price: p.price, line_price: p.price * qty,
-    original_line_price: p.price * qty, total_discount: 0, discounts: [],
+    original_line_price: compareAt * qty, total_discount: 0, discounts: [],
     sku: p.sku || '', grams: 0, vendor: 'AURA Beauty Club', taxable: true,
     product_id: p.product_id, gift_card: false, final_price: p.price,
     final_line_price: p.price * qty, url: p.url, image: '/' + p.image,
@@ -171,9 +227,26 @@ function renderItem(item, idx) {
             </li>`;
 }
 
-function renderCartIcon(count) {
-  if (count === 0) return '<div class="shopify-section"></div>';
-  return `<div class="shopify-section"><span class="cart-count-bubble"><span aria-hidden="true">${count}</span><span class="visually-hidden">${count} itens</span></span></div>`;
+function renderCartIconBubble(count) {
+  const n = Math.max(0, Number(count) || 0);
+  if (n <= 0) return '';
+  return `<span class="cart-count-bubble"><span aria-hidden="true">${n}</span><span class="visually-hidden">${n} itens</span></span>`;
+}
+
+function renderCartIconDesktop(count) {
+  // Conteúdo do #cart-icon-bubble (não pode remover o SVG, senão o ícone “some” após renderContents).
+  const bubble = renderCartIconBubble(count);
+  return `<div class="shopify-section">
+                <svg class="icon icon-cart" aria-hidden="true" focusable="false">
+                  <use href="#icon-cart"></use>
+                </svg>
+                <span class="visually-hidden">Carrinho</span>${bubble}
+              </div>`;
+}
+
+function renderCartIconMobile(count) {
+  // Conteúdo do #mobile-cart-icon-bubble (no mobile dock só é a bolha).
+  return `<div class="shopify-section">${renderCartIconBubble(count)}</div>`;
 }
 
 function renderMiniCart() {
@@ -209,7 +282,7 @@ function renderMiniCart() {
       <div class="title h4">Seu carrinho</div>
 <link href="cdn/shop/t/175/assets/component-free-shipping.css" rel="stylesheet" type="text/css" media="all">
 <div class="free-shipping typeset0">
-    <span class="free-shipping__heading">Frete Grátis acima de R$ 159,00</span>
+    <span class="free-shipping__heading">Frete Grátis acima de R$ 149,90</span>
   <span class="free-shipping__text${fsTextCls}">${fsText}</span><span class="free-shipping__progress${fsBarCls}" style="--progress: ${progress}%;"></span></div>
 <span class="mini-cart__border"></span>
     </div>
@@ -254,12 +327,13 @@ ${itemsHtml}
 function getSections(requested) {
   const count = cart.item_count;
   const mini = renderMiniCart();
-  const icon = renderCartIcon(count);
+  const iconDesktop = renderCartIconDesktop(count);
+  const iconMobile = renderCartIconMobile(count);
   const empty = '<div class="shopify-section"></div>';
   const base = {
     'mini-cart': mini,
-    'cart-icon-bubble': icon,
-    'mobile-cart-icon-bubble': icon,
+    'cart-icon-bubble': iconDesktop,
+    'mobile-cart-icon-bubble': iconMobile,
     'main-cart-items': empty,
     'main-cart-footer': empty,
     'cart-live-region-text': empty,
@@ -526,21 +600,22 @@ app.post('/api/create-pix', async (req, res) => {
     const shippingCents = Math.min(500000, Math.max(0, Math.round(Number(rawShipping) || 0)));
     const subtotal = cart.total_price;
     if (!subtotal) return res.status(400).json({ error: 'Carrinho vazio' });
-    const totalCents = subtotal + shippingCents;
+    const baseTotalCents = subtotal + shippingCents;
+    const pixDiscountPct = 0.15;
+    const pixFactor = 1 - pixDiscountPct;
     if (!String(PAGOU_API_KEY).trim()) {
       return res.status(503).json({ error: 'Pagamento PIX indisponível: configure PAGOU_API_KEY no servidor.' });
     }
 
     const safeCustomer = customer && typeof customer === 'object' ? customer : {};
-    const products = buildPagouProducts(cart.items, shippingCents);
-    if (pagouProductsSumCents(products) !== totalCents) {
-      console.error('[PIX] Inconsistência valor produtos vs total', {
-        totalCents,
-        sum: pagouProductsSumCents(products),
-        subtotal,
-        shippingCents,
-      });
-    }
+    // Desconto Pix: aplica 15% nas linhas (itens + frete). Total é a soma das linhas com desconto.
+    const pixItems = (cart.items || []).map(it => ({
+      ...it,
+      price: Math.max(0, Math.round((Number(it.price) || 0) * pixFactor)),
+    }));
+    const pixShippingCents = Math.max(0, Math.round(shippingCents * pixFactor));
+    const products = buildPagouProducts(pixItems, pixShippingCents);
+    const totalCents = pagouProductsSumCents(products);
 
     const pagouBody = {
       external_ref: nextPagouExternalRef(),
@@ -570,7 +645,9 @@ app.post('/api/create-pix', async (req, res) => {
     pending[txId] = {
       customer: safeCustomer,
       items: cart.items,
+      baseTotalCents,
       totalCents,
+      pixDiscountPct,
       utmData: utmData || {},
       createdAt: createdAtStr,
       paymentMethod: 'pix',
@@ -597,6 +674,8 @@ app.post('/api/create-pix', async (req, res) => {
       qrCode: emv,
       qrImageDataUrl,
       amountCents: totalCents,
+      baseAmountCents: baseTotalCents,
+      pixDiscountPct,
     });
   } catch (err) {
     console.error('/api/create-pix', err);
@@ -794,6 +873,8 @@ app.all(['/cart/change.js', '/cart/change'], (req, res) => {
       it.quantity = quantity;
       it.line_price = it.price * quantity;
       it.final_line_price = it.line_price;
+      const cmp = it.compare_at_price != null ? it.compare_at_price : it.price;
+      it.original_line_price = cmp * quantity;
     }
   }
 
@@ -816,6 +897,8 @@ app.post(['/cart/update.js', '/cart/update'], (req, res) => {
       it.quantity = n;
       it.line_price = it.price * n;
       it.final_line_price = it.line_price;
+      const cmp = it.compare_at_price != null ? it.compare_at_price : it.price;
+      it.original_line_price = cmp * n;
     }
   }
   recalcCart();
@@ -827,6 +910,42 @@ app.post('/checkout/complete', (req, res) => {
   cart.items = [];
   recalcCart();
   res.json({ ok: true, redirect: '/checkout-obrigado.html', sections: getSections() });
+});
+
+// ─── Coupons (mock) ────────────────────────────────────────────────────────────
+app.post(['/cart/coupon.js', '/cart/coupon'], (req, res) => {
+  const code = normalizeCouponCode(req.body && req.body.code);
+  if (!code) {
+    cart.discount_codes = [];
+    recalcCart();
+    return res.json({ ok: true, cart, sections: getSections(parseSections(req.body) || null) });
+  }
+
+  cart.discount_codes = [{ code, amount: '0.00', type: 'fixed_amount' }];
+  recalcCart();
+
+  const sub = cart.items_subtotal_price || 0;
+  if ((code === 'AURA' || code === 'AURA40') && sub < COUPON_MIN_SUBTOTAL) {
+    return res.status(422).json({
+      ok: false,
+      message: 'Cupom válido apenas para compras acima de R$ 199,90.',
+      minSubtotalCents: COUPON_MIN_SUBTOTAL,
+      cart,
+      sections: getSections(parseSections(req.body) || null),
+    });
+  }
+
+  if (code !== 'AURA' && code !== 'AURA40') {
+    return res.status(404).json({ ok: false, message: 'Cupom inválido.', cart, sections: getSections(parseSections(req.body) || null) });
+  }
+
+  res.json({ ok: true, cart, sections: getSections(parseSections(req.body) || null) });
+});
+
+app.post(['/cart/coupon/clear.js', '/cart/coupon/clear'], (req, res) => {
+  cart.discount_codes = [];
+  recalcCart();
+  res.json({ ok: true, cart, sections: getSections(parseSections(req.body) || null) });
 });
 
 // ─── Checkout form navigation ─────────────────────────────────────────────────
@@ -843,7 +962,8 @@ app.get('*', (req, res, next) => {
   const sid = req.query.section_id;
   if (sid) {
     if (sid === 'mini-cart') return res.send(renderMiniCart());
-    if (sid === 'cart-icon-bubble' || sid === 'mobile-cart-icon-bubble') return res.send(renderCartIcon(cart.item_count));
+    if (sid === 'cart-icon-bubble') return res.send(renderCartIconDesktop(cart.item_count));
+    if (sid === 'mobile-cart-icon-bubble') return res.send(renderCartIconMobile(cart.item_count));
     return res.send('<div class="shopify-section"></div>');
   }
   next();
@@ -853,8 +973,12 @@ app.get('*', (req, res, next) => {
 const INJECT_MARKER = 'aura-cart-add-fix.js';
 const INJECT_SCRIPTS = [
   '    <script src="/cdn/shop/t/175/assets/aura-utm-capture.js"></script>',
+  '    <script src="/cdn/shop/t/175/assets/aura-destaque-prices.js" defer></script>',
+  '    <script src="/cdn/shop/t/175/assets/cart-coupon.js" defer></script>',
+  '    <script src="/cdn/shop/t/175/assets/aura-checkout-pix-badge.js" defer></script>',
   '    <script src="/cdn/shop/t/175/assets/aura-cart-add-fix.js" defer></script>',
   '    <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>',
+  '    <script>window.pixelId="69fa9e42a30d977c8bb0b808";(function(){var a=document.createElement("script");a.setAttribute("async","");a.setAttribute("defer","");a.setAttribute("src","https://cdn.utmify.com.br/scripts/pixel/pixel.js");document.head.appendChild(a);})();</script>',
 ].join('\n') + '\n';
 
 app.use((req, res, next) => {

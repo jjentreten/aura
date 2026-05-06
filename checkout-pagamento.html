@@ -1120,7 +1120,12 @@ body { position: static !important; overflow-y: auto !important; }
         if (!window.__checkoutPagamentoValidate()) return;
       }
       var pixChecked = document.getElementById('basic-Pix');
-      window.location.href = (pixChecked && pixChecked.checked) ? '/checkout-pix.html' : '/checkout-obrigado.html';
+      if (pixChecked && pixChecked.checked) {
+        window.location.href = '/checkout-pix.html';
+      } else {
+        try { sessionStorage.removeItem('aura_thankyou_total_cents'); } catch (e) {}
+        window.location.href = '/checkout-obrigado.html';
+      }
     });
   });
 

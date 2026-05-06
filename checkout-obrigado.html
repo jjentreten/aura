@@ -75,7 +75,7 @@
                     </tr>
                     <tr>
                       <th scope="row">Frete</th>
-                      <td><span class="ty-money ty-money--shipping">R$&nbsp;14,37</span></td>
+                      <td><span class="ty-money ty-money--shipping">R$&nbsp;14,41</span></td>
                     </tr>
                     <tr class="ty-cost-total-row">
                       <th scope="row"><strong>Total</strong></th>
@@ -203,7 +203,7 @@
                 </tr>
                 <tr>
                   <th scope="row">Frete</th>
-                  <td><span class="ty-money ty-money--shipping">R$&nbsp;14,37</span></td>
+                      <td><span class="ty-money ty-money--shipping">R$&nbsp;14,41</span></td>
                 </tr>
                 <tr class="ty-cost-total-row">
                   <th scope="row"><strong>Total</strong></th>
@@ -284,6 +284,74 @@
     });
   }
 
+  var STORAGE_SHIPPING = 'aura_mock_shipping_cents';
+  var STORAGE_SHIPPING_LABEL = 'aura_mock_shipping_label';
+  var STORAGE_THANKYOU_PIX_TOTAL = 'aura_thankyou_total_cents';
+
+  function fmtBRLNbsp(cents) {
+    var s = (Number(cents) / 100).toLocaleString('pt-BR', {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
+    return 'R$\u00a0' + s;
+  }
+
+  function readShippingCentsFromSession() {
+    try {
+      var raw = sessionStorage.getItem(STORAGE_SHIPPING);
+      if (raw == null || raw === '') return null;
+      var n = parseInt(raw, 10);
+      return isNaN(n) ? null : Math.max(0, n);
+    } catch (e) {
+      return null;
+    }
+  }
+
+  /** Frete e totais alinhados ao fluxo (sessionStorage + /cart.js). Frete 0 → “Grátis”. */
+  function hydrateThankYouFromSession() {
+    fetch('/cart.js', { credentials: 'same-origin', headers: { Accept: 'application/json' } })
+      .then(function (r) {
+        if (!r.ok) throw new Error('cart');
+        return r.json();
+      })
+      .then(function (cart) {
+        if (!cart || !cart.item_count) return;
+
+        var ship = readShippingCentsFromSession();
+        if (ship === null) return;
+
+        try {
+          var lbl = sessionStorage.getItem(STORAGE_SHIPPING_LABEL);
+          if (lbl) {
+            var sm = document.getElementById('ty-shipping-method');
+            if (sm) sm.textContent = lbl;
+          }
+        } catch (e) {}
+
+        var sub = cart.total_price || 0;
+        setAll('.ty-money--subtotal', fmtBRLNbsp(sub));
+
+        var shipHtml = ship <= 0 ? 'Grátis' : fmtBRLNbsp(ship);
+        setAll('.ty-money--shipping', shipHtml);
+
+        var grand;
+        try {
+          var rawPix = sessionStorage.getItem(STORAGE_THANKYOU_PIX_TOTAL);
+          if (rawPix != null && rawPix !== '') {
+            var p = parseInt(rawPix, 10);
+            if (!isNaN(p) && p >= 0) grand = p;
+          }
+        } catch (e) {}
+        if (grand == null) grand = sub + ship;
+
+        setAll('.ty-money--grand-total', fmtBRLNbsp(grand));
+
+        var payAmt = document.getElementById('ty-payment-amount');
+        if (payAmt) payAmt.innerHTML = ' · ' + fmtBRLNbsp(grand) + ' BRL';
+      })
+      .catch(function () {});
+  }
+
   function updateScrollHintPublic() {
     var wrap = document.getElementById('ty-desktop-table-wrap');
     var hint = document.getElementById('ty-scroll-hint');
@@ -304,6 +372,7 @@
   }
 
   renderLineItems(defaultRows);
+  hydrateThankYouFromSession();
 
   window.addEventListener('resize', function () { updateScrollHintPublic(); });
 

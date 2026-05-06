@@ -9,6 +9,64 @@
   var STORAGE_SHIPPING_LABEL = 'aura_mock_shipping_label';
   var STORAGE_CHECKOUT_INFO = 'aura_checkout_info';
 
+  var SHIPPING_FREE_THRESHOLD = 14990; // R$ 149,90
+  var ECON_LABEL = 'Mandaê Econômico';
+  var FAST_LABEL = 'Mandaê Rápido';
+  var ECON_PRICE = 1441; // R$ 14,41
+  var FAST_PRICE = 2441; // R$ 24,41
+  var ECON_DAYS = 14;
+  var FAST_DAYS = 7;
+
+  function showLoadingModal(label) {
+    try {
+      if (document.getElementById('aura-checkout-loading')) return;
+      var overlay = document.createElement('div');
+      overlay.id = 'aura-checkout-loading';
+      overlay.style.position = 'fixed';
+      overlay.style.inset = '0';
+      overlay.style.zIndex = '999999';
+      overlay.style.background = 'rgba(0,0,0,0.35)';
+      overlay.style.display = 'flex';
+      overlay.style.alignItems = 'center';
+      overlay.style.justifyContent = 'center';
+      overlay.style.padding = '24px';
+
+      var card = document.createElement('div');
+      card.style.background = '#fff';
+      card.style.borderRadius = '14px';
+      card.style.width = 'min(420px, 100%)';
+      card.style.boxShadow = '0 18px 60px rgba(0,0,0,0.22)';
+      card.style.padding = '18px 16px';
+      card.style.display = 'flex';
+      card.style.gap = '12px';
+      card.style.alignItems = 'center';
+
+      var spinner = document.createElement('div');
+      spinner.style.width = '18px';
+      spinner.style.height = '18px';
+      spinner.style.border = '3px solid #e6e6e6';
+      spinner.style.borderTopColor = '#111';
+      spinner.style.borderRadius = '50%';
+      spinner.style.animation = 'auraSpin 0.9s linear infinite';
+
+      var text = document.createElement('div');
+      text.style.fontSize = '14px';
+      text.style.fontWeight = '600';
+      text.style.color = '#111';
+      text.textContent = label || 'Carregando…';
+
+      var style = document.createElement('style');
+      style.textContent = '@keyframes auraSpin{to{transform:rotate(360deg)}}';
+
+      card.appendChild(spinner);
+      card.appendChild(text);
+      overlay.appendChild(card);
+      document.head.appendChild(style);
+      document.body.appendChild(overlay);
+      document.body.style.overflow = 'hidden';
+    } catch (e) {}
+  }
+
   function escapeHtml(s) {
     return String(s)
       .replace(/&/g, '&amp;')
@@ -148,8 +206,9 @@
       if (form0) {
         form0.addEventListener('submit', function (e) {
           e.preventDefault();
+          showLoadingModal('Indo para o frete…');
           saveCheckoutInfoFromForm(form0);
-          window.location.href = '/checkout-frete.html';
+          setTimeout(function () { window.location.href = '/checkout-frete.html'; }, 280);
         });
       }
     }
@@ -158,13 +217,14 @@
       if (form2) {
         form2.addEventListener('submit', function (e) {
           e.preventDefault();
-          var c = readSelectedShippingCents();
+          showLoadingModal('Indo para o pagamento…');
+          var c = readSelectedShippingCents(window.__auraCart || null);
           var lbl = readSelectedShippingLabel();
           try {
             sessionStorage.setItem(STORAGE_SHIPPING, String(c));
             sessionStorage.setItem(STORAGE_SHIPPING_LABEL, lbl);
           } catch (err) {}
-          window.location.href = '/checkout-pagamento.html';
+          setTimeout(function () { window.location.href = '/checkout-pagamento.html'; }, 280);
         });
       }
     }
@@ -319,7 +379,7 @@
     }
 
     if (page === 'shipping') {
-      shipCents = readSelectedShippingCents();
+      shipCents = readSelectedShippingCents(cart);
       try {
         sessionStorage.setItem(STORAGE_SHIPPING, String(shipCents));
       } catch (e) {}
@@ -333,7 +393,7 @@
     if (page === 'payment') {
       shipCents = getShippingFromSession();
       if (!shipCents) {
-        shipCents = readSelectedShippingCents();
+        shipCents = readSelectedShippingCents(cart);
       }
       shipDisplay = fmtBRLNbsp(shipCents);
       setRowAmount(table, 'Frete', shipDisplay, false);
@@ -342,11 +402,47 @@
     }
   }
 
-  function readSelectedShippingCents() {
+  function patchShippingOptionTexts(cart) {
+    if (detectPage() !== 'shipping') return;
+    var sub = cart && typeof cart.total_price === 'number' ? cart.total_price : 0;
+    var isFree = sub >= SHIPPING_FREE_THRESHOLD;
+
+    document.querySelectorAll('input[name="shipping_methods"]').forEach(function (radio) {
+      if (!radio || !radio.id) return;
+      var sec = document.getElementById(radio.id + '-secondary');
+      var label = document.querySelector('label[for="' + radio.id + '"]');
+      if (!sec || !label) return;
+
+      var name = '';
+      var p = label.querySelector('p._1tx8jg70');
+      if (p) name = p.textContent.replace(/\s+/g, ' ').trim();
+      if (!name) name = label.textContent.replace(/\s+/g, ' ').trim();
+
+      if (name.indexOf(ECON_LABEL) !== -1) {
+        // Ex: "Mandaê Econômico · 14 dias"
+        if (p) p.textContent = ECON_LABEL + ' · ' + ECON_DAYS + ' dias';
+        sec.textContent = isFree ? 'Grátis' : fmtBRLNbsp(ECON_PRICE);
+      }
+      if (name.indexOf(FAST_LABEL) !== -1) {
+        if (p) p.textContent = FAST_LABEL + ' · ' + FAST_DAYS + ' dias';
+        sec.textContent = fmtBRLNbsp(FAST_PRICE);
+      }
+    });
+  }
+
+  function readSelectedShippingCents(cart) {
     var radio = document.querySelector('input[name="shipping_methods"]:checked');
     if (!radio || !radio.id) return 0;
+    var sub = cart && typeof cart.total_price === 'number' ? cart.total_price : 0;
     var sec = document.getElementById(radio.id + '-secondary');
     if (!sec) return 0;
+    var label = readSelectedShippingLabel();
+    if (label.indexOf(ECON_LABEL) !== -1) {
+      return (sub >= SHIPPING_FREE_THRESHOLD) ? 0 : ECON_PRICE;
+    }
+    if (label.indexOf(FAST_LABEL) !== -1) {
+      return FAST_PRICE;
+    }
     return parseBRLToCents(sec.textContent);
   }
 
@@ -361,7 +457,8 @@
   function attachShippingListeners() {
     if (detectPage() !== 'shipping') return;
     function save() {
-      var c = readSelectedShippingCents();
+      var cart = window.__auraCart || null;
+      var c = readSelectedShippingCents(cart);
       var lbl = readSelectedShippingLabel();
       try {
         sessionStorage.setItem(STORAGE_SHIPPING, String(c));
@@ -373,6 +470,8 @@
           return r.json();
         })
         .then(function (cart) {
+          window.__auraCart = cart;
+          patchShippingOptionTexts(cart);
           var aside = findOrderAside();
           if (aside) syncPageMoney(aside, cart, 'shipping');
         })
@@ -395,6 +494,8 @@
       return;
     }
 
+    window.__auraCart = cart;
+
     if (!cart.item_count) {
       window.location.href = '/cart.html';
       return;
@@ -410,6 +511,9 @@
     hydrateReviewRows();
     attachFormNavHandlers();
     attachShippingListeners();
+
+    // Atualiza textos de frete com preços/prazos e regra de grátis
+    patchShippingOptionTexts(cart);
   }
 
   if (document.readyState === 'loading') {

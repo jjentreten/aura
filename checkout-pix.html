@@ -111,6 +111,7 @@
   var storeUrl = '/';
   var pollTimer = null;
   var transactionId = null;
+  var pixOrderTotalCents = null;
 
   function goStore() { window.location.href = storeUrl; }
   document.getElementById('btn-back-store-1').addEventListener('click', goStore);
@@ -155,11 +156,12 @@
   }
 
   function applyTotalsToUi(totalCents) {
+    if (typeof totalCents === 'number' && !isNaN(totalCents)) pixOrderTotalCents = totalCents;
     var headline = document.getElementById('pix-headline');
     var totalEl = document.getElementById('pix-order-total');
     var fmt = fmtBRLNbsp(totalCents);
     if (headline) {
-      headline.textContent = 'Falta pouco! Agora pague ' + fmt + ' via Pix para finalizar sua compra';
+      headline.textContent = 'Falta pouco! Agora pague ' + fmt + ' via Pix (15% OFF) para finalizar sua compra';
     }
     if (totalEl) totalEl.textContent = fmt;
   }
@@ -177,6 +179,11 @@
       .then(function (d) {
         if (d.status === 'paid' || d.status === 'approved') {
           if (pollTimer) { clearInterval(pollTimer); pollTimer = null; }
+          try {
+            if (pixOrderTotalCents != null) {
+              sessionStorage.setItem('aura_thankyou_total_cents', String(pixOrderTotalCents));
+            }
+          } catch (e) {}
           window.location.href = '/checkout-obrigado.html';
         } else if (d.status === 'expired' || d.status === 'cancelled') {
           showError('O código expirou. Por favor, faça a compra novamente.');
@@ -237,8 +244,9 @@
       })
       .then(function (cart) {
         var ship = getShippingCents();
-        var total = (cart.total_price || 0) + ship;
-        applyTotalsToUi(total);
+        var baseTotal = (cart.total_price || 0) + ship;
+        var discountedTotal = Math.round(baseTotal * 0.85);
+        applyTotalsToUi(discountedTotal);
         var shipCents = getShippingCents();
         var utmData = {};
         try { utmData = JSON.parse(localStorage.getItem('aura_utm_params') || '{}'); } catch (e) {}
@@ -253,9 +261,7 @@
         if (d.error) { showError(d.error); return; }
         transactionId = d.transactionId;
 
-        if (typeof d.amountCents === 'number' && d.amountCents > 0) {
-          applyTotalsToUi(d.amountCents);
-        }
+        if (typeof d.amountCents === 'number' && d.amountCents > 0) applyTotalsToUi(d.amountCents);
 
         var brCode = (d.pixCode || d.qrCode || '').trim();
         if (input && brCode) input.value = brCode;
