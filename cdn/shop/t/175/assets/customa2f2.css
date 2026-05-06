@@ -1,2 +1,41 @@
 .product-grid .card--product+.card-information{max-height:none;flex-direction:column;height:fit-content;display:flex;gap:0;height:100%;flex-wrap:nowrap;height:auto;position:relative;flex:1}.product-grid .card-wrapper{height:100%;overflow:hidden;display:flex;flex-direction:column}.product-grid .grid__item .card-information .card-information__button-add-mobile{height:fit-content}.product-grid .grid__item .card-information .card-information__button-add-mobile{width:100%;margin-top:12px;flex:1;height:fit-content;display:flex;flex-direction:column;align-items:flex-end;justify-content:flex-end}.brinde-badge{background-color:#ffe5ec;border-radius:.5rem;color:#e91e63;font-weight:700;padding:.5rem}.product__brinde-badge{margin-bottom:1rem}.product__brinde-badge--group{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}.brinde-badge--ultimas-unidades{background-color:#c62828;color:#fff}.brinde-badge--lancamento{background-color:#5d4037;color:#fff}.price-item--regular.docapp-free-gift-cart-price,.cc-revoke.cc-left{display:none!important}strong{font-weight:700}
+
+/* AirReviews - visual melhorado */
+#AirReviews-BlockWrapper .AirReviews-Blocks__ReviewDetails {
+  background-color: #e8d5c0 !important;
+  border: none !important;
+  border-radius: 1.2rem !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,.1) !important;
+  padding: 2rem 2rem 1.6rem !important;
+  margin-bottom: 1.6rem;
+  border-block-start: none !important;
+}
+#AirReviews-BlockWrapper .AirReviews-Blocks__ListReview {
+  gap: 0 !important;
+}
+#AirReviews-BlockWrapper .AirReviews-Blocks__LayoutList .AirReviews-Blocks__CustomerReview {
+  gap: .8rem 1.2rem;
+}
+/* Data: remover position absolute que sobrepunha a foto */
+#AirReviews-BlockWrapper .AirReviews-Blocks .AirReviews-Blocks__Date {
+  position: static !important;
+  display: block;
+  margin-top: .2rem;
+  opacity: .55;
+  font-size: 1.2rem !important;
+}
+/* Nome do revisor */
+#AirReviews-BlockWrapper .AirReviews-Blocks__AuthorName {
+  color: #3a2210 !important;
+  font-size: 1.4rem !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+  line-height: 1.2;
+}
+/* Texto da review */
+#AirReviews-BlockWrapper .AirReviews-Blocks__Content {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #3a2210 !important;
+}
 /*# sourceMappingURL=/cdn/shop/t/175/assets/custom.css.map?v=3863616588447709281775828072 */
