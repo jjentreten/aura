@@ -278,14 +278,58 @@ function parseSections(body) {
   return [String(r)];
 }
 
-// ─── Pagou helpers ────────────────────────────────────────────────────────────
+// ─── Pagou helpers (formato API v2: developer.pagou.ai) ───────────────────────
+function pagouNotifyUrl() {
+  return `${String(SITE_URL).replace(/\/$/, '')}/api/webhook-pagou`;
+}
+
+function nextPagouExternalRef() {
+  return `aura_${Date.now()}_${Math.random().toString(36).slice(2, 12)}`;
+}
+
+function buildPagouBuyer(customer) {
+  const docDigits = String(customer.document || '').replace(/\D/g, '');
+  let docType = 'CPF';
+  if (docDigits.length >= 14) docType = 'CNPJ';
+  else if (docDigits.length >= 11) docType = 'CPF';
+  const buyer = {
+    name: (customer.name || 'Cliente').trim(),
+    email: (customer.email || '').trim(),
+    document: { type: docType, number: docDigits },
+  };
+  const phoneDigits = String(customer.phone || '').replace(/\D/g, '');
+  if (phoneDigits.length >= 10) buyer.phone = phoneDigits;
+  return buyer;
+}
+
+/** Preços em centavos por unidade (mesmo formato que `amount`). */
 function buildPagouProducts(items) {
-  if (!items || !items.length) return [{ name: 'Pedido AURA Beauty Club', quantity: 1, price: 1 }];
+  if (!items || !items.length) {
+    return [{ name: 'Pedido AURA Beauty Club', quantity: 1, price: 100 }];
+  }
   return items.map(it => ({
-    name: it.product_title || it.title || 'Produto',
+    name: String(it.product_title || it.title || 'Produto').slice(0, 256),
     quantity: it.quantity || 1,
-    price: Math.round((it.price || 0) / 100),
+    price: Math.round(it.price || 0),
   }));
+}
+
+function pagouErrorMessage(data) {
+  if (data == null || typeof data !== 'object') return 'Erro ao comunicar com o Pagou';
+  if (data.networkError) return data.message || 'Falha de rede ao contatar o Pagou';
+  if (data.parseError && data.raw) return `Resposta inválida do Pagou: ${String(data.raw).slice(0, 120)}`;
+  if (data.message) return String(data.message);
+  if (data.detail) return String(data.detail);
+  if (data.title && data.detail) return `${data.title}: ${data.detail}`;
+  if (Array.isArray(data.errors) && data.errors.length) {
+    const parts = data.errors.map(e => {
+      if (typeof e === 'string') return e;
+      const f = e.field ? `${e.field} — ` : '';
+      return `${f}${e.message || e.code || JSON.stringify(e)}`.trim();
+    });
+    return parts.filter(Boolean).join('; ') || 'Erro de validação no Pagou';
+  }
+  return 'Erro ao processar pagamento no Pagou';
 }
 
 async function pagouRequest(method, endpoint, body) {
@@ -298,9 +342,23 @@ async function pagouRequest(method, endpoint, body) {
     },
   };
   if (body) opts.body = JSON.stringify(body);
-  const res = await fetch(url, opts);
-  const data = await res.json();
-  return { ok: res.ok, status: res.status, data };
+  try {
+    const res = await fetch(url, opts);
+    const text = await res.text();
+    let data;
+    try {
+      data = text ? JSON.parse(text) : {};
+    } catch {
+      data = { parseError: true, raw: text.slice(0, 800) };
+    }
+    return { ok: res.ok, status: res.status, data };
+  } catch (err) {
+    return {
+      ok: false,
+      status: 0,
+      data: { message: err.message || String(err), networkError: true },
+    };
+  }
 }
 
 // ─── Utmify helper ────────────────────────────────────────────────────────────
@@ -362,33 +420,36 @@ app.post('/api/create-pix', async (req, res) => {
     const { customer, utmData } = req.body;
     const totalCents = cart.total_price;
     if (!totalCents) return res.status(400).json({ error: 'Carrinho vazio' });
+    if (!String(PAGOU_API_KEY).trim()) {
+      return res.status(503).json({ error: 'Pagamento PIX indisponível: configure PAGOU_API_KEY no servidor.' });
+    }
 
+    const safeCustomer = customer && typeof customer === 'object' ? customer : {};
     const pagouBody = {
+      external_ref: nextPagouExternalRef(),
       method: 'pix',
       amount: totalCents,
-      customer: {
-        name: customer.name || '',
-        email: customer.email || '',
-        document: String(customer.document || '').replace(/\D/g, ''),
-        phone: String(customer.phone || '').replace(/\D/g, ''),
-      },
+      currency: 'BRL',
+      buyer: buildPagouBuyer(safeCustomer),
       products: buildPagouProducts(cart.items),
-      notification_url: `${SITE_URL}/api/webhook-pagou`,
+      notify_url: pagouNotifyUrl(),
     };
 
-    const { ok, data } = await pagouRequest('POST', '/v2/transactions', pagouBody);
+    const { ok, status: httpStatus, data } = await pagouRequest('POST', '/v2/transactions', pagouBody);
     if (!ok || !data.data) {
-      return res.status(502).json({ error: data.message || 'Erro ao criar PIX' });
+      console.error('[Pagou] create-pix falhou', { httpStatus, response: data });
+      return res.status(502).json({ error: pagouErrorMessage(data) });
     }
 
     const txId = data.data.id;
-    const qrCode = data.data.pix && data.data.pix.qr_code;
-    const pixCode = data.data.pix && data.data.pix.code;
+    const pix = data.data.pix || {};
+    const brCode = pix.code || pix.qr_code || '';
+    const qrCode = pix.qr_code || pix.qr_code_base64 || pix.code;
 
     // Save pending order
     const pending = readPendingOrders();
     pending[txId] = {
-      customer,
+      customer: safeCustomer,
       items: cart.items,
       totalCents,
       utmData: utmData || {},
@@ -397,9 +458,9 @@ app.post('/api/create-pix', async (req, res) => {
     writePendingOrders(pending);
 
     // Notify Utmify: waiting_payment
-    await sendToUtmify(buildUtmifyPayload(txId, 'waiting_payment', customer, cart.items, totalCents, utmData));
+    await sendToUtmify(buildUtmifyPayload(txId, 'waiting_payment', safeCustomer, cart.items, totalCents, utmData));
 
-    res.json({ transactionId: txId, qrCode, pixCode });
+    res.json({ transactionId: txId, qrCode: qrCode || brCode, pixCode: brCode || qrCode });
   } catch (err) {
     console.error('/api/create-pix', err);
     res.status(500).json({ error: 'Erro interno' });
@@ -411,42 +472,45 @@ app.post('/api/create-card', async (req, res) => {
     const { customer, cardToken, installments, utmData } = req.body;
     const totalCents = cart.total_price;
     if (!totalCents) return res.status(400).json({ error: 'Carrinho vazio' });
+    if (!String(PAGOU_API_KEY).trim()) {
+      return res.status(503).json({ error: 'Pagamento com cartão indisponível: configure PAGOU_API_KEY no servidor.' });
+    }
 
+    const safeCustomer = customer && typeof customer === 'object' ? customer : {};
     const pagouBody = {
+      external_ref: nextPagouExternalRef(),
       method: 'credit_card',
       amount: totalCents,
-      customer: {
-        name: customer.name || '',
-        email: customer.email || '',
-        document: String(customer.document || '').replace(/\D/g, ''),
-        phone: String(customer.phone || '').replace(/\D/g, ''),
-      },
+      currency: 'BRL',
+      token: cardToken,
+      installments: Number(installments) || 1,
+      buyer: buildPagouBuyer(safeCustomer),
       products: buildPagouProducts(cart.items),
-      card: { token: cardToken, installments: Number(installments) || 1 },
-      notification_url: `${SITE_URL}/api/webhook-pagou`,
+      notify_url: pagouNotifyUrl(),
     };
 
-    const { ok, data } = await pagouRequest('POST', '/v2/transactions', pagouBody);
+    const { ok, status: httpStatus, data } = await pagouRequest('POST', '/v2/transactions', pagouBody);
     if (!ok || !data.data) {
-      return res.status(502).json({ error: data.message || 'Erro ao processar cartão' });
+      console.error('[Pagou] create-card falhou', { httpStatus, response: data });
+      return res.status(502).json({ error: pagouErrorMessage(data) });
     }
 
     const txId = data.data.id;
-    const status = data.data.status;
+    const payStatus = data.data.status;
 
-    if (status === 'paid' || status === 'approved') {
+    if (payStatus === 'paid' || payStatus === 'approved') {
       cart.items = [];
       recalcCart();
-      await sendToUtmify(buildUtmifyPayload(txId, 'paid', customer, [], totalCents, utmData));
+      await sendToUtmify(buildUtmifyPayload(txId, 'paid', safeCustomer, [], totalCents, utmData));
       return res.json({ ok: true, status: 'paid', redirect: '/checkout-obrigado.html' });
     }
 
     const pending = readPendingOrders();
-    pending[txId] = { customer, items: [], totalCents, utmData: utmData || {}, createdAt: Date.now() };
+    pending[txId] = { customer: safeCustomer, items: [], totalCents, utmData: utmData || {}, createdAt: Date.now() };
     writePendingOrders(pending);
 
-    await sendToUtmify(buildUtmifyPayload(txId, 'waiting_payment', customer, cart.items, totalCents, utmData));
-    res.json({ ok: true, status, transactionId: txId });
+    await sendToUtmify(buildUtmifyPayload(txId, 'waiting_payment', safeCustomer, cart.items, totalCents, utmData));
+    res.json({ ok: true, status: payStatus, transactionId: txId });
   } catch (err) {
     console.error('/api/create-card', err);
     res.status(500).json({ error: 'Erro interno' });
@@ -457,7 +521,9 @@ app.get('/api/pix-status/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const { ok, data } = await pagouRequest('GET', `/v2/transactions/${id}`);
-    if (!ok || !data.data) return res.status(502).json({ error: 'Erro ao consultar status' });
+    if (!ok || !data.data) {
+      return res.status(502).json({ error: pagouErrorMessage(data) });
+    }
 
     const status = data.data.status;
     if (status === 'paid' || status === 'approved') {

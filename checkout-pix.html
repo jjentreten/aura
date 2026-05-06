@@ -105,6 +105,7 @@
     </div>
   </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.4/build/qrcode.min.js"></script>
 <script>
 (function () {
   var storeUrl = '/';
@@ -184,10 +185,25 @@
       .then(function (d) {
         if (d.error) { showError(d.error); return; }
         transactionId = d.transactionId;
-        if (d.qrCode) {
-          document.getElementById('pix-qr-placeholder').src = 'data:image/png;base64,' + d.qrCode;
+        var rawQr = d.qrCode || '';
+        var brCode = (d.pixCode || rawQr || '').trim();
+        if (input && brCode) input.value = brCode;
+        var imgEl = document.getElementById('pix-qr-placeholder');
+        if (imgEl && brCode) {
+          if (/^data:image\//i.test(rawQr)) {
+            imgEl.src = rawQr;
+          } else if (typeof QRCode !== 'undefined' && /^000201/.test(brCode)) {
+            QRCode.toDataURL(brCode, { width: 158, margin: 2, errorCorrectionLevel: 'M' }, function (err, url) {
+              if (!err && url) imgEl.src = url;
+            });
+          } else if (rawQr && !/^000201/.test(rawQr)) {
+            imgEl.src = 'data:image/png;base64,' + rawQr;
+          } else if (typeof QRCode !== 'undefined') {
+            QRCode.toDataURL(brCode, { width: 158, margin: 2, errorCorrectionLevel: 'M' }, function (err, url) {
+              if (!err && url) imgEl.src = url;
+            });
+          }
         }
-        if (d.pixCode) input.value = d.pixCode;
         pollTimer = setInterval(pollStatus, 5000);
       })
       .catch(function (err) {
