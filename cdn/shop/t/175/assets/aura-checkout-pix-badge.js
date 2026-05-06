@@ -1,6 +1,6 @@
 /**
  * Ajustes do checkout para Pix:
- * - Badge "15% OFF" ao lado do label Pix na página /checkout-pagamento.html (espelho estático)
+ * - Badge "10% OFF" ao lado do label Pix na página /checkout-pagamento.html (espelho estático)
  */
 (function () {
   'use strict';
@@ -15,7 +15,7 @@
 
     var badge = document.createElement('span');
     badge.className = 'aura-pix-badge';
-    badge.textContent = '15% OFF';
+    badge.textContent = '10% OFF';
     badge.style.display = 'inline-flex';
     badge.style.alignItems = 'center';
     badge.style.marginLeft = '8px';

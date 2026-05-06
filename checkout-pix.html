@@ -161,7 +161,7 @@
     var totalEl = document.getElementById('pix-order-total');
     var fmt = fmtBRLNbsp(totalCents);
     if (headline) {
-      headline.textContent = 'Falta pouco! Agora pague ' + fmt + ' via Pix (15% OFF) para finalizar sua compra';
+      headline.textContent = 'Falta pouco! Agora pague ' + fmt + ' via Pix para finalizar sua compra';
     }
     if (totalEl) totalEl.textContent = fmt;
   }
@@ -245,7 +245,7 @@
       .then(function (cart) {
         var ship = getShippingCents();
         var baseTotal = (cart.total_price || 0) + ship;
-        var discountedTotal = Math.round(baseTotal * 0.85);
+        var discountedTotal = Math.round(baseTotal * 0.9);
         applyTotalsToUi(discountedTotal);
         var shipCents = getShippingCents();
         var utmData = {};

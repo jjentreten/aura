@@ -5,6 +5,22 @@
 (function () {
   'use strict';
 
+  /** Esconde e-mail/endereço estáticos do HTML até preencher com dados do lead (evita “flash” duplo). */
+  (function injectReviewPlaceholderHide() {
+    try {
+      var path = typeof location !== 'undefined' ? location.pathname || '' : '';
+      if (path.indexOf('checkout-frete') === -1 && path.indexOf('checkout-pagamento') === -1) return;
+      if (document.getElementById('aura-review-placeholder-hide')) return;
+      var st = document.createElement('style');
+      st.id = 'aura-review-placeholder-hide';
+      st.textContent =
+        'html:not(.aura-review-hydrated) #checkout-main [role="table"] [role="cell"] span[dir="ltr"],' +
+        'html:not(.aura-review-hydrated) #checkout-main [role="table"] [role="cell"] address{' +
+        'visibility:hidden!important}';
+      (document.head || document.documentElement).appendChild(st);
+    } catch (e) {}
+  })();
+
   var STORAGE_SHIPPING = 'aura_mock_shipping_cents';
   var STORAGE_SHIPPING_LABEL = 'aura_mock_shipping_label';
   var STORAGE_CHECKOUT_INFO = 'aura_checkout_info';
@@ -174,15 +190,15 @@
       var rh = row.querySelector('[role="rowheader"]');
       if (!rh) continue;
       var h = normalizeReviewHeader(rh.textContent);
-      if (h === 'Contato' && info && info.email) {
+      if (h === 'Contato') {
         var span = row.querySelector('[role="cell"] span[dir="ltr"]');
-        if (span) span.textContent = info.email;
+        if (span) span.textContent = info && info.email ? info.email : '';
       }
-      if (h === 'Enviar para' && info) {
+      if (h === 'Enviar para') {
         var addr = row.querySelector('address');
         if (addr) {
-          var txt = formatAddressFromInfo(info);
-          if (txt) addr.textContent = txt;
+          var txt = info ? formatAddressFromInfo(info) : '';
+          addr.textContent = txt || '';
         }
       }
       if (h === 'Forma de frete') {
@@ -501,14 +517,18 @@
       return;
     }
 
+    var page = detectPage();
+    hydrateReviewRows();
+    try {
+      document.documentElement.classList.add('aura-review-hydrated');
+    } catch (e) {}
+
     var aside = findOrderAside();
     if (!aside) return;
 
-    var page = detectPage();
     syncLineItems(aside, cart);
     syncPageMoney(aside, cart, page);
     clearMobileDisclosureClone();
-    hydrateReviewRows();
     attachFormNavHandlers();
     attachShippingListeners();
 

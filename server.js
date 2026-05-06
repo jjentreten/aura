@@ -601,14 +601,14 @@ app.post('/api/create-pix', async (req, res) => {
     const subtotal = cart.total_price;
     if (!subtotal) return res.status(400).json({ error: 'Carrinho vazio' });
     const baseTotalCents = subtotal + shippingCents;
-    const pixDiscountPct = 0.15;
+    const pixDiscountPct = 0.1;
     const pixFactor = 1 - pixDiscountPct;
     if (!String(PAGOU_API_KEY).trim()) {
       return res.status(503).json({ error: 'Pagamento PIX indisponível: configure PAGOU_API_KEY no servidor.' });
     }
 
     const safeCustomer = customer && typeof customer === 'object' ? customer : {};
-    // Desconto Pix: aplica 15% nas linhas (itens + frete). Total é a soma das linhas com desconto.
+    // Desconto Pix: aplica 10% nas linhas (itens + frete). Total é a soma das linhas com desconto.
     const pixItems = (cart.items || []).map(it => ({
       ...it,
       price: Math.max(0, Math.round((Number(it.price) || 0) * pixFactor)),
